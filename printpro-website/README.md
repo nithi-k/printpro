@@ -4,6 +4,26 @@ Quick static marketing site for PrintPro (Chaiyaboon Brothers Group's merchandis
 production / brand OEM division). No build step, no dependencies — plain HTML/CSS/JS,
 so it works as-is on GitHub Pages, Netlify, Vercel, or any static host.
 
+## Language
+
+Site copy is in **Thai** (`<html lang="th">`) — PrintPro's target audience is Thai.
+Print-technology terms stay in English by design (DTG, Sublimation, Screen Print,
+Embroidery, Kornit, Brother GTX, DGI, plus certification names like REACH/RoHS/EN71/
+ZDHC/ECO TEX and material terms like rPET), since those are the terms buyers and the
+industry actually use, even in Thai conversation. Everything else — nav, hero, section
+copy, product captions, chip lists — is Thai.
+
+Font stack now leads with **Noto Sans Thai** (loaded from Google Fonts alongside Inter,
+see the `<link>` in `index.html`'s `<head>`) so Thai glyphs render properly — Inter alone
+has no Thai character support. `--font` in `styles.css` was updated to
+`'Noto Sans Thai', 'Inter', ...`. Screenshot-checked at desktop width: headings, nav, and
+card grids all hold their layout fine with the Thai copy (Thai runs a bit longer than the
+English original in a few spots, e.g. the hero subhead, but nothing overflows or breaks).
+
+To revert a section to English or tweak a translation, just edit the visible text in
+`index.html` — nothing else needs to change. `alt` attributes on images were left in
+English (not user-facing, doesn't affect rendering).
+
 ## Files
 
 - `index.html` — the whole site (single page, anchor-linked sections)
@@ -39,6 +59,41 @@ philosophy, just with an energy layer on top:
   PrintPro sells production services to brands/festivals, not products direct to
   consumers, so cart/checkout was deliberately left out. Say the word if that should
   change.
+
+## Floating product cloud (`#float-cloud`)
+
+New section right after the hero/marquee. **Redesigned in round 2** after feedback that
+the first version (six white-matted cards, scattered and rotated like a pile of
+polaroids) looked "not professional" and "funny." Rebuilt to match a reference
+Sentry-style SaaS landing animation instead: fewer elements, a clear size hierarchy, no
+rotation, edge-to-edge glass-style cards, and a soft radial glow behind everything.
+
+Current design:
+- **4 cards, not 6** — one large focal card (`.float-card--lg`, the basketball shorts),
+  two medium supporting cards (`.float-card--md`), one small accent card
+  (`.float-card--sm`). Mirrors the reference video's "one big shape + supporting
+  elements" composition instead of a crowded scatter.
+- **No rotation.** The old `--rot` custom property (tilt between -11deg/+10deg) is gone
+  entirely — cards sit straight, which reads as far more premium/intentional.
+- **Glass-style cards**, not white polaroid mats: `border-radius:16px`, a subtle
+  `rgba(255,255,255,0.14)` border, `rgba(255,255,255,0.04)` fill, and a soft dark drop
+  shadow — the photo fills the card edge-to-edge instead of sitting in a white frame.
+- **`.float-glow`** — a new absolutely-positioned layer behind the cards with two purple
+  radial gradients, echoing the vignette/glow background from the reference video.
+- Idle bob is still pure CSS (`@keyframes floatBob`, translateY only now — no rotation
+  in the keyframe either) on the inner `.float-card-bob`, so it still runs with no JS.
+  Cursor-parallax still lives on the outer `.float-card` via `gsap.quickTo`, kept on a
+  separate element from the bob for the same reason as before (GSAP and a CSS animation
+  can't both drive one element's `transform`).
+- Parallax amplitude was toned down (`relX * 32 * depth` / `relY * 22 * depth`, was
+  `50`/`36`) for a subtler drift instead of an obvious swing.
+- Cursor-follow only activates on hover-capable devices with GSAP loaded (checked in
+  `script.js`); everywhere else the cards still bob in place.
+- On narrow screens (≤900px) it switches to a horizontal-scrolling shelf of the same
+  cards (see the `.float-canvas` override in the `@media (max-width: 900px)` block in
+  `styles.css`), unaffected by this redesign.
+- Swap which products appear by editing the four `.float-card` blocks in `index.html`
+  (`top`/`left` inline styles position them; `float-card--lg/--md/--sm` sets the size).
 
 ## Hero photo
 
