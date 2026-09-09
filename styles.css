@@ -538,6 +538,29 @@ p { margin: 0; }
 .contact-section .lede { margin: 0 auto; text-align: center; }
 .contact-section .btn { margin-top: 32px; }
 
+.contact-line {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(35,31,32,0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.contact-line-label { font-size: 14px; color: var(--ink-soft); }
+.contact-line-qr {
+  display: block;
+  padding: 10px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(35,31,32,0.1);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.contact-line-qr:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(35,31,32,0.14); }
+.contact-line-qr img { display: block; width: 120px; height: 120px; }
+.contact-line-link { font-size: 14.5px; font-weight: 700; color: var(--purple); }
+.contact-line-link:hover { color: var(--purple-light); }
+
 /* ---------- Footer ---------- */
 .site-footer { background: var(--ink); padding: 40px 0; }
 .footer-inner { display: flex; align-items: center; gap: 16px; }
