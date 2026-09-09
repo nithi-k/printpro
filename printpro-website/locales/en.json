@@ -1,0 +1,162 @@
+{
+  "meta": {
+    "description": "PrintPro is Chaiyaboon Brothers Group's merchandise production and brand OEM division — DTG, screen printing, sublimation and embroidery, backed by 70+ years of in-house ink manufacturing."
+  },
+  "nav": {
+    "story": "Story",
+    "ecosystem": "Ecosystem",
+    "produce": "What We Produce",
+    "print": "How We Print",
+    "sustainability": "Sustainability",
+    "cta": "Get a Quote",
+    "toggleLabel": "Toggle navigation"
+  },
+  "hero": {
+    "credit": "On location, Bangkok &middot; PrintPro print worn by our artist collaborator",
+    "eyebrow": "Chaiyaboon Brothers Group &middot; Merchandise Division",
+    "sub": "Merchandise production and brand OEM — DTG, silkscreen, sublimation and embroidery, built on 70+ years of in-house ink manufacturing. One partner, from ink formula to finished merch on your doorstep.",
+    "ctaPrimary": "Get a Quote",
+    "ctaSecondary": "See What We Make"
+  },
+  "marquee": {
+    "ink": "70+ YEARS OF INK"
+  },
+  "story": {
+    "eyebrow": "Our Story",
+    "heading": "70 Years of Ink.<br />Now We Make the Merch.",
+    "lede": "Chaiyaboon Brothers Group has been the backbone of Thailand's screen printing industry since the 1950s — supplying inks to garment manufacturers, print shops, and textile businesses across Southeast Asia. PrintPro is CBG's dedicated merchandise production division, built to bring that same ink expertise directly into the world of event, artist, and brand merchandise.",
+    "stat1Label": "Years in Screen&nbsp;Ink Business",
+    "stat2Label": "Largest Screen Ink Manufacturer in&nbsp;Thailand",
+    "stat3Label": "PrintPro Merch Division Founded",
+    "stat4Value": "Full",
+    "stat4Label": "End-to-End Ecosystem"
+  },
+  "ecosystem": {
+    "eyebrow": "Our Ecosystem",
+    "heading": "From Ink Formula<br />to Finished Merch.",
+    "lede": "Because we manufacture our own inks, we control every variable other suppliers can't — color accuracy, wash durability, eco-compliance, and cost. That's the unfair advantage.",
+    "step1Title": "Ink Manufacturing",
+    "step1Body": "CBG formulates and produces screen printing, UV, and eco inks in-house — 70 years of R&amp;D.",
+    "step2Title": "Garment Sourcing",
+    "step2Body": "Direct relationships with fabric mills across Thailand and SE Asia — cotton, rPET, organic options. Official exclusive distributor of ArriveGuide in Thailand.",
+    "step3Title": "Printing &amp; Production",
+    "step3Body": "Screen print, DTG (Kornit), sublimation, embroidery, garment dye — all under one roof.",
+    "step4Title": "Merch &amp; Delivery",
+    "step4Body": "PrintPro packages, QC inspects, and ships to your warehouse or direct to event site."
+  },
+  "produce": {
+    "eyebrow": "What We Produce",
+    "heading": "39 SKUs, Three Categories,<br />One Production Line.",
+    "lede": "Apparel, headwear, and everything else that can carry a print — browse the range below, or skip to what's caught your eye.",
+    "jumpApparel": "Apparel",
+    "jumpHeadwear": "Headwear",
+    "jumpOthers": "Others"
+  },
+  "apparel": {
+    "eyebrow": "Apparel",
+    "heading": "Tees, Cuts, Layers<br />&amp; Outerwear.",
+    "lede": "Every silhouette the mainstage demands — custom print and embroidery across the full range.",
+    "badge": "13 Products &middot; Full Range",
+    "itemSoccerJersey": "Custom Soccer Jersey",
+    "itemRegularTee": "Regular T-Shirt",
+    "itemOversizedTee": "Oversized T-Shirt",
+    "itemWashedTee": "Washed T-Shirt",
+    "itemBasketballJersey": "Basketball Jersey",
+    "itemBasketballShorts": "Basketball Shorts",
+    "chip1": "Crop T-Shirt",
+    "chip2": "Baby Tee",
+    "chip3": "Tank Top",
+    "chip4": "Hoodie",
+    "chip5": "Sweatpant",
+    "chip6": "Baseball Jersey",
+    "chip7": "Jacket",
+    "chip8": "Boxer Shorts"
+  },
+  "headwear": {
+    "eyebrow": "Headwear",
+    "heading": "Sun-Blocking,<br />Crowd-Ready.",
+    "lede": "Headwear for every festival moment — custom print and embroidery across the full range.",
+    "badge": "9 Products &middot; Full Range",
+    "chip1": "Baseball Cap",
+    "chip2": "Trucker Hat",
+    "chip3": "Bucket Hat",
+    "chip4": "Lifeguard Hat",
+    "chip5": "Snapback",
+    "chip6": "Outdoor Bucket Hat",
+    "chip7": "Beanies",
+    "chip8": "Head Band",
+    "photoCaption": "Dad Hat — embroidered"
+  },
+  "others": {
+    "eyebrow": "Others",
+    "heading": "If It Can Be Screened,<br />We Can Merch It.",
+    "lede": "The real range goes beyond apparel and headwear. Across Chaiyaboon's full client base, any object that can take a screen becomes merch — umbrellas, coolers, tumblers, footwear, packaging. If it holds an image, we can run it.",
+    "badge": "17+ Products &middot; And Growing",
+    "itemUmbrella": "Branded Umbrella",
+    "itemLanyards": "Woven Lanyards",
+    "itemCooler": "Branded Cooler",
+    "itemTumbler": "Branded Tumbler",
+    "itemFlipFlops": "Branded Flip-Flops",
+    "itemPackaging": "Custom Packaging",
+    "chip1": "Blanket",
+    "chip2": "Towel",
+    "chip3": "Bandana",
+    "chip4": "Keychain",
+    "chip5": "Sticker Slap Pack",
+    "chip6": "Sticker Pack",
+    "chip7": "Waterproof Phone Case",
+    "chip8": "Magnet",
+    "chip9": "Handheld Fan",
+    "chip10": "Tote Bag",
+    "chip11": "Tissue Paper",
+    "chip12": "Pillow",
+    "chip13": "Mini Backpack",
+    "chip14": "Pashmina",
+    "chip15": "Wristband",
+    "fineprint": "Sample pieces from the exhibition floor &middot; produced across PrintPro &amp; the wider Chaiyaboon Brothers Group client base."
+  },
+  "print": {
+    "eyebrow": "How We Print",
+    "heading": "Three Technologies.<br />Endless Possibilities.",
+    "dtgSub1": "<strong>Kornit DTG</strong> — mass production. Industrial-grade, photographic quality, high-volume runs with no color limits, water-based eco inks, no screens required.",
+    "dtgSub2": "<strong>Brother GTX</strong> — live on-site, small orders. Deployed at your festival: fans pick a design and watch it print in ~2 minutes.",
+    "screenSub1": "<strong>All ink types, in-house</strong> — CBG manufactures plastisol, water-based, UV, discharge, metallic, glow, and puff inks. 70 years of formulation.",
+    "screenSub2": "<strong>Production network</strong> — our ink clients are printing shops across Thailand. When demand scales, we activate this network for extra capacity on demand.",
+    "sublimationSub1": "<strong>DGI Printers</strong> — in-house equipment for high-resolution dye-sublimation: all-over prints, polyester garments, soft accessories, full-bleed designs.",
+    "sublimationSub2": "<strong>Expanded capacity</strong> — additional sublimation capacity via our production partner network for large-scale or time-sensitive orders."
+  },
+  "sustainability": {
+    "eyebrow": "Sustainability",
+    "heading": "Made for a<br />Greener Merch Run.",
+    "card1Title": "Certified Ink Manufacturing",
+    "card1Body": "CBG's ink factory holds REACH, RoHS, and EN71 environmental certifications — meeting EU safety and chemical compliance standards across all ink formulations.",
+    "card2Title": "Low-VOC Ink Formulations",
+    "card2Body": "Our screen printing inks are formulated low-VOC — safer for production workers, printers, and end consumers, with reduced environmental impact during curing.",
+    "card3Title": "ECO TEX Certified DTG",
+    "card3Body": "All DTG printing on our Kornit machines uses ECO TEX certified inks exclusively — water-based, skin-safe, and certified for direct contact with garments.",
+    "card4Title": "Recycled &amp; Organic Fabrics",
+    "card4Body": "rPET recycled polyester and organic cotton options available across all apparel SKUs — sourced through ArriveGuide and our SE Asia fabric mill network."
+  },
+  "why": {
+    "eyebrow": "Why PrintPro",
+    "heading": "Five Reasons to<br />Talk to Us.",
+    "reason1Title": "70+ Years of Manufacturing Heritage",
+    "reason1Body": "We don't just print on garments — we manufacture the inks that print them. A track record no new-entry supplier can replicate.",
+    "reason2Title": "End-to-End Production, One Ecosystem",
+    "reason2Body": "From ink formulation to finished garment — sourcing, printing, QC, and delivery are all connected. Fewer handoffs, fewer problems.",
+    "reason3Title": "Festival-Ready Product Range",
+    "reason3Body": "39 SKUs across apparel, headwear, and accessories — from core tees to on-site live-printed keepsakes.",
+    "reason4Title": "Sustainable Materials &amp; Certified Inks",
+    "reason4Body": "REACH, RoHS, EN71, ZDHC, and ECO TEX certifications, plus rPET and organic cotton options.",
+    "reason5Title": "Flexible, Small Runs to Large-Scale Volume",
+    "reason5Body": "Brother GTX for live on-site drops. Kornit DTG and screen printing for mass production. One partner, any scale — 50 pieces to 50,000 units."
+  },
+  "contact": {
+    "eyebrow": "Next Steps",
+    "heading": "Let's Bring Your<br />Merch to Life.",
+    "lede": "Introductory call to align on requirements, timeline &amp; volumes &middot; factory visit with full production samples &middot; formal quotation after brief confirmation."
+  },
+  "footer": {
+    "tagline": "PrintPro — Merchandise Division of Chaiyaboon Brothers Group (CBG)"
+  }
+}

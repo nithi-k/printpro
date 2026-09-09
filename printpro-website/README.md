@@ -4,25 +4,73 @@ Quick static marketing site for PrintPro (Chaiyaboon Brothers Group's merchandis
 production / brand OEM division). No build step, no dependencies — plain HTML/CSS/JS,
 so it works as-is on GitHub Pages, Netlify, Vercel, or any static host.
 
-## Language
+## Language / localization
 
-Site copy is in **Thai** (`<html lang="th">`) — PrintPro's target audience is Thai.
-Print-technology terms stay in English by design (DTG, Sublimation, Screen Print,
-Embroidery, Kornit, Brother GTX, DGI, plus certification names like REACH/RoHS/EN71/
-ZDHC/ECO TEX and material terms like rPET), since those are the terms buyers and the
-industry actually use, even in Thai conversation. Everything else — nav, hero, section
-copy, product captions, chip lists — is Thai.
+Site defaults to **Thai** (PrintPro's target audience), with a **TH / EN switch** in the
+header — this is a real i18n setup now, not just hardcoded Thai text, so adding a third
+language later is a JSON file, not a rewrite.
 
-Font stack now leads with **Noto Sans Thai** (loaded from Google Fonts alongside Inter,
-see the `<link>` in `index.html`'s `<head>`) so Thai glyphs render properly — Inter alone
-has no Thai character support. `--font` in `styles.css` was updated to
-`'Noto Sans Thai', 'Inter', ...`. Screenshot-checked at desktop width: headings, nav, and
-card grids all hold their layout fine with the Thai copy (Thai runs a bit longer than the
-English original in a few spots, e.g. the hero subhead, but nothing overflows or breaks).
+How it works:
+- `locales/th.json` and `locales/en.json` hold every translatable string, keyed by
+  section (e.g. `hero.sub`, `apparel.chip3`, `sustainability.card2Body`). Both files
+  currently have the exact same set of keys — swap or add values there, nothing else
+  needs to change.
+- Every translatable element in `index.html` carries `data-i18n="that.key"`. The Thai
+  string also sits inline in the HTML as the default/fallback (so the page still reads
+  correctly even if JS or the fetch fails — same graceful-degradation approach as the
+  rest of the site).
+- `i18n.js` (new file, loaded before `script.js`) reads the `?lang=` URL param or a
+  saved `localStorage` preference (falls back to Thai), fetches the matching
+  `locales/<lang>.json`, and writes each value into its `data-i18n` element —
+  `innerHTML` by default (several keys contain `<br/>`/`<strong>` markup), or a specific
+  attribute when the element also has `data-i18n-attr="content"` / `"aria-label"` (used
+  for the `<meta name="description">` tag and the mobile nav toggle's label).
+- The `.lang-switch` TH/EN buttons in the header (`index.html`, styled in `styles.css`)
+  call `i18n.js`'s switcher and persist the choice in `localStorage`.
+- **Not translated on purpose:** the brand wordmark/H1 ("All in One / Merch Solution.")
+  and the print-technology terms (DTG, Sublimation, Screen Print, Embroidery, Kornit,
+  Brother GTX, DGI, REACH/RoHS/EN71/ZDHC/ECO TEX, rPET) stay in English in both locale
+  files — those are the terms the industry and buyers actually use, in Thai conversation
+  too. `alt` attributes on images were also left in English (not user-facing).
 
-To revert a section to English or tweak a translation, just edit the visible text in
-`index.html` — nothing else needs to change. `alt` attributes on images were left in
-English (not user-facing, doesn't affect rendering).
+**Adding a language:** copy `locales/en.json` to e.g. `locales/id.json`, translate the
+values (keep every key identical), add `'id'` to `SUPPORTED_LANGS` in `i18n.js`, and add
+a `<button data-lang="id">ID</button>` to `.lang-switch` in `index.html`. Then run
+`python3 scripts/embed-locales.py` once so the new language also works from a
+double-clicked file (see below) — that's the whole change, no other file needs to know a
+new language exists.
+
+**Works from a plain double-click, no server needed.** Browsers block `fetch()` from
+reading local files when a page is opened directly via `file://` (this is what caused the
+switch to silently do nothing the first time around — clicking EN would fail to fetch
+`locales/en.json` and just give up). Fixed now with a fallback: `i18n.js` tries
+`fetch('locales/<lang>.json')` first (the live source of truth, always used wherever the
+site is actually hosted — GitHub Pages, Netlify, a local `python3 -m http.server`, etc.,
+and it always reflects the latest edits to the JSON files with zero extra steps there),
+and if that fails, it falls back to a bundled snapshot of the same data sitting inline in
+`index.html` (`<script type="application/json" id="i18n-embedded-th/en">`, near the
+closing `</body>`) — so the language switch also works immediately when the file is just
+double-clicked, with no server at all.
+
+Those embedded blocks are a **generated snapshot**, not something to hand-edit. If you
+edit `locales/th.json` or `locales/en.json`, refresh them with:
+
+```bash
+python3 scripts/embed-locales.py
+```
+
+This is optional in the sense that it only affects the file://-preview path — anywhere
+the site is actually hosted over http(s), `fetch()` succeeds and reads `locales/*.json`
+directly, live, so the embedded snapshot is never even used there. But it's a good habit
+to run it after every translation edit anyway, so a quick local double-click check always
+shows the current copy too.
+
+Font stack leads with **Noto Sans Thai** (loaded from Google Fonts alongside Inter, see
+the `<link>` in `index.html`'s `<head>`) so Thai glyphs render properly — Inter alone has
+no Thai character support. `--font` in `styles.css` is
+`'Noto Sans Thai', 'Inter', ...`. Screenshot-checked at desktop width in both languages:
+headings, nav, and card grids hold their layout fine (Thai runs a little longer than
+English in a few spots, e.g. the hero subhead, but nothing overflows or breaks).
 
 ## Files
 
@@ -30,6 +78,10 @@ English (not user-facing, doesn't affect rendering).
 - `styles.css` — all styling, brand tokens defined at the top as CSS variables
 - `script.js` — mobile nav, header scroll state, hero cursor spotlight, animated stat
   counters, and GSAP ScrollTrigger scroll-reveals
+- `i18n.js` — localization loader (TH/EN switch); see "Language / localization" above
+- `locales/th.json`, `locales/en.json` — the actual translated strings
+- `scripts/embed-locales.py` — regenerates the file://-fallback snapshot embedded in
+  `index.html` from `locales/*.json`; run after editing translations (optional, see above)
 - `assets/` — logo exports pulled from `PRINTPRO_ALL_IN_ONE_MERCH_SOLUTION.ai`:
   - `printpro-logo-isolated.png` — background keyed transparent, for use on dark sections (nav/footer)
   - `printpro-logo-boxed.png` — original lockup with its dark backing, works on any background
@@ -59,41 +111,6 @@ philosophy, just with an energy layer on top:
   PrintPro sells production services to brands/festivals, not products direct to
   consumers, so cart/checkout was deliberately left out. Say the word if that should
   change.
-
-## Floating product cloud (`#float-cloud`)
-
-New section right after the hero/marquee. **Redesigned in round 2** after feedback that
-the first version (six white-matted cards, scattered and rotated like a pile of
-polaroids) looked "not professional" and "funny." Rebuilt to match a reference
-Sentry-style SaaS landing animation instead: fewer elements, a clear size hierarchy, no
-rotation, edge-to-edge glass-style cards, and a soft radial glow behind everything.
-
-Current design:
-- **4 cards, not 6** — one large focal card (`.float-card--lg`, the basketball shorts),
-  two medium supporting cards (`.float-card--md`), one small accent card
-  (`.float-card--sm`). Mirrors the reference video's "one big shape + supporting
-  elements" composition instead of a crowded scatter.
-- **No rotation.** The old `--rot` custom property (tilt between -11deg/+10deg) is gone
-  entirely — cards sit straight, which reads as far more premium/intentional.
-- **Glass-style cards**, not white polaroid mats: `border-radius:16px`, a subtle
-  `rgba(255,255,255,0.14)` border, `rgba(255,255,255,0.04)` fill, and a soft dark drop
-  shadow — the photo fills the card edge-to-edge instead of sitting in a white frame.
-- **`.float-glow`** — a new absolutely-positioned layer behind the cards with two purple
-  radial gradients, echoing the vignette/glow background from the reference video.
-- Idle bob is still pure CSS (`@keyframes floatBob`, translateY only now — no rotation
-  in the keyframe either) on the inner `.float-card-bob`, so it still runs with no JS.
-  Cursor-parallax still lives on the outer `.float-card` via `gsap.quickTo`, kept on a
-  separate element from the bob for the same reason as before (GSAP and a CSS animation
-  can't both drive one element's `transform`).
-- Parallax amplitude was toned down (`relX * 32 * depth` / `relY * 22 * depth`, was
-  `50`/`36`) for a subtler drift instead of an obvious swing.
-- Cursor-follow only activates on hover-capable devices with GSAP loaded (checked in
-  `script.js`); everywhere else the cards still bob in place.
-- On narrow screens (≤900px) it switches to a horizontal-scrolling shelf of the same
-  cards (see the `.float-canvas` override in the `@media (max-width: 900px)` block in
-  `styles.css`), unaffected by this redesign.
-- Swap which products appear by editing the four `.float-card` blocks in `index.html`
-  (`top`/`left` inline styles position them; `float-card--lg/--md/--sm` sets the size).
 
 ## Hero photo
 
@@ -134,10 +151,8 @@ range, print methods, sustainability, why-PrintPro). The "39 SKUs" figure and ca
 counts (13 apparel / 9 headwear / 17 accessories) come straight from that deck.
 
 **Placeholders to fill in before this goes fully live:**
-- Contact email in the footer/CTA (`hello@printpro.co.th`) — replace with the real inbox
-- No real product photography is used (the source deck's tiles were gradient
-  placeholders, not real photos) — swap in real shots when available, the
-  `.category-card` / product grid markup is ready for images
+- Contact email in the CTA is `printpro@chaiyaboon.com` (find it in the `#contact`
+  section of `index.html` if it ever needs to change again)
 
 ## Brand color note
 

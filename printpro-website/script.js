@@ -45,36 +45,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // ---------- Floating product cloud (cursor parallax) ----------
-  // Idle bob animation runs via pure CSS on .float-card-bob regardless of JS/GSAP,
-  // so the cloud still animates even if this fails. This block only adds the extra
-  // cursor-follow parallax layer on top, on hover-capable devices with GSAP loaded.
-  var floatCanvas = document.getElementById('float-canvas');
-  if (floatCanvas && window.matchMedia('(hover: hover)').matches && typeof window.gsap !== 'undefined') {
-    var floatCards = floatCanvas.querySelectorAll('.float-card');
-    var xTo = [], yTo = [];
-    floatCards.forEach(function (card, i) {
-      xTo[i] = gsap.quickTo(card, 'x', { duration: 0.9, ease: 'power3.out' });
-      yTo[i] = gsap.quickTo(card, 'y', { duration: 0.9, ease: 'power3.out' });
-    });
-    floatCanvas.addEventListener('mousemove', function (e) {
-      var rect = floatCanvas.getBoundingClientRect();
-      var relX = (e.clientX - rect.left) / rect.width - 0.5;
-      var relY = (e.clientY - rect.top) / rect.height - 0.5;
-      floatCards.forEach(function (card, i) {
-        var depth = parseFloat(card.getAttribute('data-depth')) || 1;
-        xTo[i](relX * 32 * depth);
-        yTo[i](relY * 22 * depth);
-      });
-    });
-    floatCanvas.addEventListener('mouseleave', function () {
-      floatCards.forEach(function (card, i) {
-        xTo[i](0);
-        yTo[i](0);
-      });
-    });
-  }
-
   // ---------- Animated stat counters ----------
   var counters = document.querySelectorAll('.stat-num[data-count]');
   var animateCount = function (el) {

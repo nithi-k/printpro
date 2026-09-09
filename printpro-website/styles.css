@@ -99,6 +99,32 @@ p { margin: 0; }
 }
 .nav-toggle span { width: 22px; height: 2px; background: #fff; border-radius: 2px; }
 
+/* Language switch — small pill toggle next to the nav CTA. Populated/driven by
+   i18n.js; see /locales/*.json for the translatable strings. */
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  border-radius: 999px;
+  border: 1px solid var(--border-on-dark);
+  background: rgba(255,255,255,0.04);
+}
+.lang-switch button {
+  border: none;
+  background: none;
+  color: var(--muted-on-dark);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 5px 11px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.lang-switch button:hover { color: #fff; }
+.lang-switch button.is-active { background: var(--purple); color: #fff; }
+
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
@@ -200,64 +226,6 @@ p { margin: 0; }
 .btn-ghost { border: 1px solid var(--border-on-dark); color: #fff; transition: background 0.15s ease, transform 0.15s ease; }
 .btn-ghost:hover { background: rgba(255,255,255,0.08); transform: translateY(-2px); }
 .btn-large { font-size: 17px; padding: 16px 32px; }
-
-/* ---------- Floating product cloud ---------- */
-.float-section { position: relative; overflow: hidden; padding-bottom: 24px; }
-.float-glow {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background:
-    radial-gradient(48% 55% at 62% 28%, rgba(123,47,255,0.30), transparent 72%),
-    radial-gradient(36% 40% at 10% 82%, rgba(116,82,162,0.16), transparent 72%);
-}
-.float-canvas {
-  position: relative;
-  z-index: 1;
-  max-width: var(--wrap);
-  height: 480px;
-  margin: 56px auto 0;
-  padding: 0 24px;
-}
-.float-card {
-  position: absolute;
-  transform: translate(0, 0);
-  will-change: transform;
-}
-.float-card--lg { width: 300px; }
-.float-card--md { width: 210px; }
-.float-card--sm { width: 152px; }
-.float-card-bob {
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.14);
-  background: rgba(255,255,255,0.04);
-  box-shadow: 0 30px 60px -24px rgba(0,0,0,0.65);
-  animation-name: floatBob;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  transition: box-shadow 0.35s ease, border-color 0.35s ease, transform 0.35s ease;
-}
-.float-card-bob img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  display: block;
-}
-.float-card--sm .float-card-bob img { aspect-ratio: 1 / 1; }
-.float-card:hover .float-card-bob {
-  animation-play-state: paused;
-  border-color: rgba(123,47,255,0.55);
-  box-shadow: 0 34px 70px -18px var(--glow);
-  transform: translateY(-4px);
-}
-@keyframes floatBob {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
-}
-@media (prefers-reduced-motion: reduce) {
-  .float-card-bob { animation: none; }
-}
 
 /* ---------- Marquee ticker ---------- */
 .marquee {
@@ -582,16 +550,6 @@ p { margin: 0; }
   .showcase-grid { grid-template-columns: repeat(3, 1fr); }
   .headwear-inner { grid-template-columns: 1fr; }
   .headwear-photo { max-width: 380px; }
-  .float-canvas {
-    position: static;
-    height: auto;
-    display: flex;
-    gap: 16px;
-    overflow-x: auto;
-    padding: 4px 24px 12px;
-    -webkit-overflow-scrolling: touch;
-  }
-  .float-card, .float-card--lg, .float-card--md, .float-card--sm { position: static; width: 190px; flex: 0 0 auto; }
 }
 
 @media (max-width: 720px) {

@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>PrintPro — All in One Merch Solution</title>
-<meta name="description" content="PrintPro คือหน่วยธุรกิจผลิตเมอร์ชและรับผลิต OEM ในเครือ Chaiyaboon Brothers Group — DTG, Screen Printing, Sublimation และ Embroidery หนุนหลังด้วยประสบการณ์ผลิตหมึกสกรีนกว่า 70 ปี" />
+<meta name="description" data-i18n="meta.description" data-i18n-attr="content" content="PrintPro คือหน่วยธุรกิจผลิตเมอร์ชและรับผลิต OEM ในเครือ Chaiyaboon Brothers Group — DTG, Screen Printing, Sublimation และ Embroidery หนุนหลังด้วยประสบการณ์ผลิตหมึกสกรีนกว่า 70 ปี" />
 <link rel="icon" type="image/png" href="assets/favicon-256.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,14 +21,18 @@
       <img src="assets/printpro-logo-isolated.png" alt="PrintPro" class="brand-logo" />
     </a>
     <nav class="main-nav" id="main-nav">
-      <a href="#story">เรื่องราวของเรา</a>
-      <a href="#ecosystem">ระบบนิเวศการผลิต</a>
-      <a href="#produce">สินค้าที่เราผลิต</a>
-      <a href="#print">เทคนิคการพิมพ์</a>
-      <a href="#sustainability">ความยั่งยืน</a>
-      <a href="#contact" class="nav-cta">ขอใบเสนอราคา</a>
+      <a href="#story" data-i18n="nav.story">เรื่องราวของเรา</a>
+      <a href="#ecosystem" data-i18n="nav.ecosystem">ระบบนิเวศการผลิต</a>
+      <a href="#produce" data-i18n="nav.produce">สินค้าที่เราผลิต</a>
+      <a href="#print" data-i18n="nav.print">เทคนิคการพิมพ์</a>
+      <a href="#sustainability" data-i18n="nav.sustainability">ความยั่งยืน</a>
+      <a href="#contact" class="nav-cta" data-i18n="nav.cta">ขอใบเสนอราคา</a>
     </nav>
-    <button class="nav-toggle" id="nav-toggle" aria-label="เปิด/ปิดเมนู" aria-expanded="false">
+    <div class="lang-switch" role="group" aria-label="Language / ภาษา">
+      <button type="button" data-lang="th" class="is-active">TH</button>
+      <button type="button" data-lang="en">EN</button>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" data-i18n="nav.toggleLabel" data-i18n-attr="aria-label" aria-label="เปิด/ปิดเมนู" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -40,14 +44,14 @@
   <section class="hero" id="hero">
     <div class="hero-spotlight" id="hero-spotlight" aria-hidden="true"></div>
     <div class="hero-grain" aria-hidden="true"></div>
-    <p class="hero-credit">ถ่ายทำที่กรุงเทพฯ &middot; งานพิมพ์ PrintPro สวมใส่โดยศิลปินผู้ร่วมงานกับเรา</p>
+    <p class="hero-credit" data-i18n="hero.credit">ถ่ายทำที่กรุงเทพฯ &middot; งานพิมพ์ PrintPro สวมใส่โดยศิลปินผู้ร่วมงานกับเรา</p>
     <div class="wrap hero-inner">
-      <p class="eyebrow reveal">Chaiyaboon Brothers Group &middot; หน่วยธุรกิจเมอร์ชแชนไดส์</p>
+      <p class="eyebrow reveal" data-i18n="hero.eyebrow">Chaiyaboon Brothers Group &middot; หน่วยธุรกิจเมอร์ชแชนไดส์</p>
       <h1 class="reveal"><span class="line">All in One</span><span class="line text-purple">Merch Solution.</span></h1>
-      <p class="hero-sub reveal">ผู้ผลิตเมอร์ชแชนไดส์และรับผลิต OEM ครบวงจร — DTG, Silkscreen, Sublimation และ Embroidery ต่อยอดจากประสบการณ์ผลิตหมึกสกรีนในเครือกว่า 70 ปี พาร์ทเนอร์เดียวที่ดูแลตั้งแต่สูตรหมึกจนถึงเมอร์ชสำเร็จรูปส่งถึงหน้างาน</p>
+      <p class="hero-sub reveal" data-i18n="hero.sub">ผู้ผลิตเมอร์ชแชนไดส์และรับผลิต OEM ครบวงจร — DTG, Silkscreen, Sublimation และ Embroidery ต่อยอดจากประสบการณ์ผลิตหมึกสกรีนในเครือกว่า 70 ปี พาร์ทเนอร์เดียวที่ดูแลตั้งแต่สูตรหมึกจนถึงเมอร์ชสำเร็จรูปส่งถึงหน้างาน</p>
       <div class="hero-actions reveal">
-        <a href="#contact" class="btn btn-primary">ขอใบเสนอราคา</a>
-        <a href="#produce" class="btn btn-ghost">ดูสินค้าที่เราผลิต</a>
+        <a href="#contact" class="btn btn-primary" data-i18n="hero.ctaPrimary">ขอใบเสนอราคา</a>
+        <a href="#produce" class="btn btn-ghost" data-i18n="hero.ctaSecondary">ดูสินค้าที่เราผลิต</a>
       </div>
     </div>
   </section>
@@ -60,60 +64,28 @@
       <span>SILK SCREEN</span><span class="dot">&bull;</span>
       <span>SUBLIMATION</span><span class="dot">&bull;</span>
       <span>EMBROIDERY</span><span class="dot">&bull;</span>
-      <span>ผลิตหมึกมากว่า 70 ปี</span><span class="dot">&bull;</span>
+      <span data-i18n="marquee.ink">ผลิตหมึกมากว่า 70 ปี</span><span class="dot">&bull;</span>
       <span>ALL IN ONE MERCH SOLUTION</span><span class="dot">&bull;</span>
       <span>DTG PRINTING</span><span class="dot">&bull;</span>
       <span>SILK SCREEN</span><span class="dot">&bull;</span>
       <span>SUBLIMATION</span><span class="dot">&bull;</span>
       <span>EMBROIDERY</span><span class="dot">&bull;</span>
-      <span>ผลิตหมึกมากว่า 70 ปี</span><span class="dot">&bull;</span>
+      <span data-i18n="marquee.ink">ผลิตหมึกมากว่า 70 ปี</span><span class="dot">&bull;</span>
     </div>
   </div>
-
-  <!-- FLOATING PRODUCT CLOUD -->
-  <section class="section section-dark float-section" id="float-cloud">
-    <div class="float-glow" aria-hidden="true"></div>
-    <div class="wrap">
-      <p class="eyebrow">งานพิมพ์จริง สินค้าจริง</p>
-      <h2>สิ่งที่เราผลิตจริง ไม่ใช่ Mockup</h2>
-      <p class="lede lede-light">ไม่ใช่ภาพสต็อก ไม่ใช่ Mockup — ทุกชิ้นด้านล่างนี้ผลิตออกจากไลน์การผลิตของเราจริง</p>
-    </div>
-    <div class="float-canvas" id="float-canvas">
-      <div class="float-card float-card--lg" data-depth="0.9" style="top:6%; left:52%;">
-        <div class="float-card-bob" style="animation-duration:6.5s;">
-          <img src="assets/products/custom-basketball-shorts.jpg" alt="Custom basketball shorts" loading="lazy" />
-        </div>
-      </div>
-      <div class="float-card float-card--md" data-depth="1.3" style="top:10%; left:6%;">
-        <div class="float-card-bob" style="animation-duration:5.4s; animation-delay:-1.2s;">
-          <img src="assets/products/custom-soccer-jersey.jpg" alt="Custom soccer jersey" loading="lazy" />
-        </div>
-      </div>
-      <div class="float-card float-card--sm" data-depth="1.6" style="top:60%; left:16%;">
-        <div class="float-card-bob" style="animation-duration:4.8s; animation-delay:-2.4s;">
-          <img src="assets/products/embroidered-dad-cap.jpg" alt="Embroidered dad cap" loading="lazy" />
-        </div>
-      </div>
-      <div class="float-card float-card--md" data-depth="1.1" style="top:54%; left:66%;">
-        <div class="float-card-bob" style="animation-duration:5.9s; animation-delay:-0.6s;">
-          <img src="assets/products/branded-tumbler.jpg" alt="Branded tumbler" loading="lazy" />
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- STORY -->
   <section class="section" id="story">
     <div class="wrap">
-      <p class="eyebrow eyebrow-dark">เรื่องราวของเรา</p>
-      <h2>70 ปีแห่งหมึกพิมพ์<br />วันนี้เราผลิตเมอร์ชด้วย</h2>
-      <p class="lede">Chaiyaboon Brothers Group คือหนึ่งในเสาหลักของอุตสาหกรรม Screen Printing ในประเทศไทยมาตั้งแต่ยุค 1950s — ผลิตและจัดส่งหมึกให้ผู้ผลิตเสื้อผ้า โรงพิมพ์ และธุรกิจสิ่งทอทั่วภูมิภาคเอเชียตะวันออกเฉียงใต้ PrintPro คือหน่วยธุรกิจผลิตเมอร์ชแชนไดส์โดยเฉพาะของ CBG สร้างขึ้นเพื่อนำความเชี่ยวชาญด้านหมึกพิมพ์นั้นมาต่อยอดสู่โลกของเมอร์ชสำหรับอีเวนต์ ศิลปิน และแบรนด์โดยตรง</p>
+      <p class="eyebrow eyebrow-dark" data-i18n="story.eyebrow">เรื่องราวของเรา</p>
+      <h2 data-i18n="story.heading">70 ปีแห่งหมึกพิมพ์<br />วันนี้เราผลิตเมอร์ชด้วย</h2>
+      <p class="lede" data-i18n="story.lede">Chaiyaboon Brothers Group คือหนึ่งในเสาหลักของอุตสาหกรรม Screen Printing ในประเทศไทยมาตั้งแต่ยุค 1950s — ผลิตและจัดส่งหมึกให้ผู้ผลิตเสื้อผ้า โรงพิมพ์ และธุรกิจสิ่งทอทั่วภูมิภาคเอเชียตะวันออกเฉียงใต้ PrintPro คือหน่วยธุรกิจผลิตเมอร์ชแชนไดส์โดยเฉพาะของ CBG สร้างขึ้นเพื่อนำความเชี่ยวชาญด้านหมึกพิมพ์นั้นมาต่อยอดสู่โลกของเมอร์ชสำหรับอีเวนต์ ศิลปิน และแบรนด์โดยตรง</p>
 
       <div class="stat-grid">
-        <div class="stat"><span class="stat-num" data-count="70" data-suffix="+">0</span><span class="stat-label">ปีในธุรกิจหมึกสกรีน</span></div>
-        <div class="stat"><span class="stat-num">#1</span><span class="stat-label">ผู้ผลิตหมึกสกรีนรายใหญ่ที่สุดในประเทศไทย</span></div>
-        <div class="stat"><span class="stat-num" data-count="2024">0</span><span class="stat-label">ปีที่ก่อตั้งหน่วยธุรกิจ PrintPro</span></div>
-        <div class="stat"><span class="stat-num">ครบวงจร</span><span class="stat-label">ระบบนิเวศ End-to-End</span></div>
+        <div class="stat"><span class="stat-num" data-count="70" data-suffix="+">0</span><span class="stat-label" data-i18n="story.stat1Label">ปีในธุรกิจหมึกสกรีน</span></div>
+        <div class="stat"><span class="stat-num">#1</span><span class="stat-label" data-i18n="story.stat2Label">ผู้ผลิตหมึกสกรีนรายใหญ่ที่สุดในประเทศไทย</span></div>
+        <div class="stat"><span class="stat-num" data-count="2024">0</span><span class="stat-label" data-i18n="story.stat3Label">ปีที่ก่อตั้งหน่วยธุรกิจ PrintPro</span></div>
+        <div class="stat"><span class="stat-num" data-i18n="story.stat4Value">ครบวงจร</span><span class="stat-label" data-i18n="story.stat4Label">ระบบนิเวศ End-to-End</span></div>
       </div>
     </div>
   </section>
@@ -121,30 +93,30 @@
   <!-- ECOSYSTEM -->
   <section class="section section-dark" id="ecosystem">
     <div class="wrap">
-      <p class="eyebrow">ระบบนิเวศของเรา</p>
-      <h2>จากสูตรหมึก<br />สู่เมอร์ชสำเร็จรูป</h2>
-      <p class="lede lede-light">เพราะเราผลิตหมึกเองทุกสูตร เราจึงควบคุมทุกตัวแปรที่ซัพพลายเออร์รายอื่นทำไม่ได้ — ความแม่นยำของสี ความทนทานต่อการซัก มาตรฐานสิ่งแวดล้อม และต้นทุน นี่คือความได้เปรียบที่คู่แข่งลอกเลียนไม่ได้</p>
+      <p class="eyebrow" data-i18n="ecosystem.eyebrow">ระบบนิเวศของเรา</p>
+      <h2 data-i18n="ecosystem.heading">จากสูตรหมึก<br />สู่เมอร์ชสำเร็จรูป</h2>
+      <p class="lede lede-light" data-i18n="ecosystem.lede">เพราะเราผลิตหมึกเองทุกสูตร เราจึงควบคุมทุกตัวแปรที่ซัพพลายเออร์รายอื่นทำไม่ได้ — ความแม่นยำของสี ความทนทานต่อการซัก มาตรฐานสิ่งแวดล้อม และต้นทุน นี่คือความได้เปรียบที่คู่แข่งลอกเลียนไม่ได้</p>
 
       <div class="flow-grid">
         <div class="flow-card">
           <span class="flow-num">01</span>
-          <h3>ผลิตหมึกพิมพ์</h3>
-          <p>CBG คิดค้นและผลิตหมึก Screen Printing, UV และหมึกรักษ์โลกเองในโรงงาน — สั่งสมงานวิจัยและพัฒนามากว่า 70 ปี</p>
+          <h3 data-i18n="ecosystem.step1Title">ผลิตหมึกพิมพ์</h3>
+          <p data-i18n="ecosystem.step1Body">CBG คิดค้นและผลิตหมึก Screen Printing, UV และหมึกรักษ์โลกเองในโรงงาน — สั่งสมงานวิจัยและพัฒนามากว่า 70 ปี</p>
         </div>
         <div class="flow-card">
           <span class="flow-num">02</span>
-          <h3>จัดหาผ้าและเสื้อผ้าเปล่า</h3>
-          <p>สายสัมพันธ์โดยตรงกับโรงทอผ้าทั่วไทยและเอเชียตะวันออกเฉียงใต้ — ตัวเลือกผ้าคอตตอน, rPET, ผ้าออร์แกนิก และเป็นผู้แทนจำหน่ายอย่างเป็นทางการแต่เพียงผู้เดียวของ ArriveGuide ในประเทศไทย</p>
+          <h3 data-i18n="ecosystem.step2Title">จัดหาผ้าและเสื้อผ้าเปล่า</h3>
+          <p data-i18n="ecosystem.step2Body">สายสัมพันธ์โดยตรงกับโรงทอผ้าทั่วไทยและเอเชียตะวันออกเฉียงใต้ — ตัวเลือกผ้าคอตตอน, rPET, ผ้าออร์แกนิก และเป็นผู้แทนจำหน่ายอย่างเป็นทางการแต่เพียงผู้เดียวของ ArriveGuide ในประเทศไทย</p>
         </div>
         <div class="flow-card">
           <span class="flow-num">03</span>
-          <h3>พิมพ์และผลิต</h3>
-          <p>Screen Print, DTG (Kornit), Sublimation, Embroidery, Garment Dye — ครบทุกเทคนิคภายใต้หลังคาเดียว</p>
+          <h3 data-i18n="ecosystem.step3Title">พิมพ์และผลิต</h3>
+          <p data-i18n="ecosystem.step3Body">Screen Print, DTG (Kornit), Sublimation, Embroidery, Garment Dye — ครบทุกเทคนิคภายใต้หลังคาเดียว</p>
         </div>
         <div class="flow-card">
           <span class="flow-num">04</span>
-          <h3>แพ็กและจัดส่ง</h3>
-          <p>PrintPro แพ็กสินค้า ตรวจสอบคุณภาพ (QC) และจัดส่งถึงคลังของคุณหรือส่งตรงถึงหน้างานอีเวนต์</p>
+          <h3 data-i18n="ecosystem.step4Title">แพ็กและจัดส่ง</h3>
+          <p data-i18n="ecosystem.step4Body">PrintPro แพ็กสินค้า ตรวจสอบคุณภาพ (QC) และจัดส่งถึงคลังของคุณหรือส่งตรงถึงหน้างานอีเวนต์</p>
         </div>
       </div>
     </div>
@@ -153,13 +125,13 @@
   <!-- WHAT WE PRODUCE (intro) -->
   <section class="section produce-intro" id="produce">
     <div class="wrap">
-      <p class="eyebrow eyebrow-dark">สินค้าที่เราผลิต</p>
-      <h2>39 SKU สามหมวดหมู่<br />ไลน์การผลิตเดียว</h2>
-      <p class="lede">เสื้อผ้า หมวก และของอื่น ๆ ที่รับงานพิมพ์ได้ — เลือกดูสินค้าทั้งหมดด้านล่าง หรือข้ามไปหมวดที่คุณสนใจได้เลย</p>
+      <p class="eyebrow eyebrow-dark" data-i18n="produce.eyebrow">สินค้าที่เราผลิต</p>
+      <h2 data-i18n="produce.heading">39 SKU สามหมวดหมู่<br />ไลน์การผลิตเดียว</h2>
+      <p class="lede" data-i18n="produce.lede">เสื้อผ้า หมวก และของอื่น ๆ ที่รับงานพิมพ์ได้ — เลือกดูสินค้าทั้งหมดด้านล่าง หรือข้ามไปหมวดที่คุณสนใจได้เลย</p>
       <div class="produce-jump">
-        <a href="#apparel">เสื้อผ้า (Apparel)</a>
-        <a href="#headwear">หมวก (Headwear)</a>
-        <a href="#others">อื่น ๆ (Others)</a>
+        <a href="#apparel" data-i18n="produce.jumpApparel">เสื้อผ้า (Apparel)</a>
+        <a href="#headwear" data-i18n="produce.jumpHeadwear">หมวก (Headwear)</a>
+        <a href="#others" data-i18n="produce.jumpOthers">อื่น ๆ (Others)</a>
       </div>
     </div>
   </section>
@@ -169,24 +141,24 @@
     <div class="wrap">
       <div class="category-heading">
         <div>
-          <p class="eyebrow">เสื้อผ้า (Apparel)</p>
-          <h2>เสื้อยืด เสื้อตัด เลเยอร์<br />และเสื้อคลุม</h2>
-          <p class="lede lede-light">ทุกทรงที่งานบนเวทีใหญ่ต้องการ — สั่งพิมพ์และปักได้ครบทุกแบบในช่วงราคาเดียว</p>
+          <p class="eyebrow" data-i18n="apparel.eyebrow">เสื้อผ้า (Apparel)</p>
+          <h2 data-i18n="apparel.heading">เสื้อยืด เสื้อตัด เลเยอร์<br />และเสื้อคลุม</h2>
+          <p class="lede lede-light" data-i18n="apparel.lede">ทุกทรงที่งานบนเวทีใหญ่ต้องการ — สั่งพิมพ์และปักได้ครบทุกแบบในช่วงราคาเดียว</p>
         </div>
-        <span class="category-badge">13 รายการ &middot; ครบทุกไซซ์</span>
+        <span class="category-badge" data-i18n="apparel.badge">13 รายการ &middot; ครบทุกไซซ์</span>
       </div>
 
       <div class="showcase-grid">
-        <figure class="showcase-item"><img src="assets/products/custom-soccer-jersey.jpg" alt="Custom soccer jersey" loading="lazy" /><figcaption>เสื้อฟุตบอลสั่งพิมพ์</figcaption></figure>
-        <figure class="showcase-item"><img src="assets/products/streetwear-graphic-tee-01.jpg" alt="Regular fit graphic tee" loading="lazy" /><figcaption>เสื้อยืดทรงปกติ</figcaption></figure>
-        <figure class="showcase-item"><img src="assets/products/streetwear-graphic-tee-02.jpg" alt="Oversized graphic tee" loading="lazy" /><figcaption>เสื้อยืดทรง Oversize</figcaption></figure>
-        <figure class="showcase-item"><img src="assets/products/garment-dyed-tee.jpg" alt="Washed garment-dyed tee" loading="lazy" /><figcaption>เสื้อยืดฟอกสี</figcaption></figure>
-        <figure class="showcase-item"><img src="assets/products/custom-basketball-jersey.jpg" alt="Custom basketball jersey" loading="lazy" /><figcaption>เสื้อบาสเกตบอล</figcaption></figure>
-        <figure class="showcase-item"><img src="assets/products/custom-basketball-shorts.jpg" alt="Custom basketball shorts" loading="lazy" /><figcaption>กางเกงบาสเกตบอล</figcaption></figure>
+        <figure class="showcase-item"><img src="assets/products/custom-soccer-jersey.jpg" alt="Custom soccer jersey" loading="lazy" /><figcaption data-i18n="apparel.itemSoccerJersey">เสื้อฟุตบอลสั่งพิมพ์</figcaption></figure>
+        <figure class="showcase-item"><img src="assets/products/streetwear-graphic-tee-01.jpg" alt="Regular fit graphic tee" loading="lazy" /><figcaption data-i18n="apparel.itemRegularTee">เสื้อยืดทรงปกติ</figcaption></figure>
+        <figure class="showcase-item"><img src="assets/products/streetwear-graphic-tee-02.jpg" alt="Oversized graphic tee" loading="lazy" /><figcaption data-i18n="apparel.itemOversizedTee">เสื้อยืดทรง Oversize</figcaption></figure>
+        <figure class="showcase-item"><img src="assets/products/garment-dyed-tee.jpg" alt="Washed garment-dyed tee" loading="lazy" /><figcaption data-i18n="apparel.itemWashedTee">เสื้อยืดฟอกสี</figcaption></figure>
+        <figure class="showcase-item"><img src="assets/products/custom-basketball-jersey.jpg" alt="Custom basketball jersey" loading="lazy" /><figcaption data-i18n="apparel.itemBasketballJersey">เสื้อบาสเกตบอล</figcaption></figure>
+        <figure class="showcase-item"><img src="assets/products/custom-basketball-shorts.jpg" alt="Custom basketball shorts" loading="lazy" /><figcaption data-i18n="apparel.itemBasketballShorts">กางเกงบาสเกตบอล</figcaption></figure>
       </div>
       <ul class="chip-list chip-list-dark">
-        <li>เสื้อครอป</li><li>Baby Tee</li><li>เสื้อกล้าม</li><li>Hoodie</li>
-        <li>กางเกงวอร์ม</li><li>เสื้อเบสบอล</li><li>แจ็กเก็ต</li><li>กางเกงบ็อกเซอร์</li>
+        <li data-i18n="apparel.chip1">เสื้อครอป</li><li data-i18n="apparel.chip2">Baby Tee</li><li data-i18n="apparel.chip3">เสื้อกล้าม</li><li data-i18n="apparel.chip4">Hoodie</li>
+        <li data-i18n="apparel.chip5">กางเกงวอร์ม</li><li data-i18n="apparel.chip6">เสื้อเบสบอล</li><li data-i18n="apparel.chip7">แจ็กเก็ต</li><li data-i18n="apparel.chip8">กางเกงบ็อกเซอร์</li>
       </ul>
     </div>
   </section>
@@ -195,18 +167,18 @@
   <section class="section headwear-section" id="headwear">
     <div class="wrap headwear-inner">
       <div class="headwear-text">
-        <p class="eyebrow eyebrow-dark">หมวก (Headwear)</p>
-        <h2>กันแดดได้<br />พร้อมลุยทุกฝูงชน</h2>
-        <p class="lede">หมวกสำหรับทุกโมเมนต์ในเทศกาล — สั่งพิมพ์และปักได้ครบทุกแบบ</p>
-        <span class="category-badge category-badge-light">9 รายการ &middot; ครบทุกไซซ์</span>
+        <p class="eyebrow eyebrow-dark" data-i18n="headwear.eyebrow">หมวก (Headwear)</p>
+        <h2 data-i18n="headwear.heading">กันแดดได้<br />พร้อมลุยทุกฝูงชน</h2>
+        <p class="lede" data-i18n="headwear.lede">หมวกสำหรับทุกโมเมนต์ในเทศกาล — สั่งพิมพ์และปักได้ครบทุกแบบ</p>
+        <span class="category-badge category-badge-light" data-i18n="headwear.badge">9 รายการ &middot; ครบทุกไซซ์</span>
         <ul class="chip-list">
-          <li>หมวกแก๊ป (Baseball Cap)</li><li>Trucker Hat</li><li>หมวกบักเก็ต (Bucket Hat)</li><li>Lifeguard Hat</li>
-          <li>Snapback</li><li>Outdoor Bucket Hat</li><li>หมวกไหมพรม (Beanies)</li><li>ผ้าคาดผม (Head Band)</li>
+          <li data-i18n="headwear.chip1">หมวกแก๊ป (Baseball Cap)</li><li data-i18n="headwear.chip2">Trucker Hat</li><li data-i18n="headwear.chip3">หมวกบักเก็ต (Bucket Hat)</li><li data-i18n="headwear.chip4">Lifeguard Hat</li>
+          <li data-i18n="headwear.chip5">Snapback</li><li data-i18n="headwear.chip6">Outdoor Bucket Hat</li><li data-i18n="headwear.chip7">หมวกไหมพรม (Beanies)</li><li data-i18n="headwear.chip8">ผ้าคาดผม (Head Band)</li>
         </ul>
       </div>
       <figure class="headwear-photo">
         <img src="assets/products/embroidered-dad-cap.jpg" alt="Embroidered dad cap" loading="lazy" />
-        <figcaption>Dad Hat — งานปัก (Embroidered)</figcaption>
+        <figcaption data-i18n="headwear.photoCaption">Dad Hat — งานปัก (Embroidered)</figcaption>
       </figure>
     </div>
   </section>
@@ -216,64 +188,64 @@
     <div class="wrap">
       <div class="category-heading">
         <div>
-          <p class="eyebrow">อื่น ๆ (Others)</p>
-          <h2>สกรีนลงได้ ก็ทำเป็นเมอร์ชได้<br />ไม่ว่าจะเป็นอะไรก็ตาม</h2>
-          <p class="lede lede-light">ขอบเขตจริง ๆ ของเราไปไกลกว่าเสื้อผ้าและหมวก จากฐานลูกค้าทั้งหมดของ Chaiyaboon วัตถุใดก็ตามที่สกรีนลงได้ กลายเป็นเมอร์ชได้ทั้งนั้น — ร่ม กระติกน้ำแข็ง แก้วน้ำ รองเท้า บรรจุภัณฑ์ ถ้ามันรับภาพได้ เราพิมพ์ได้</p>
+          <p class="eyebrow" data-i18n="others.eyebrow">อื่น ๆ (Others)</p>
+          <h2 data-i18n="others.heading">สกรีนลงได้ ก็ทำเป็นเมอร์ชได้<br />ไม่ว่าจะเป็นอะไรก็ตาม</h2>
+          <p class="lede lede-light" data-i18n="others.lede">ขอบเขตจริง ๆ ของเราไปไกลกว่าเสื้อผ้าและหมวก จากฐานลูกค้าทั้งหมดของ Chaiyaboon วัตถุใดก็ตามที่สกรีนลงได้ กลายเป็นเมอร์ชได้ทั้งนั้น — ร่ม กระติกน้ำแข็ง แก้วน้ำ รองเท้า บรรจุภัณฑ์ ถ้ามันรับภาพได้ เราพิมพ์ได้</p>
         </div>
-        <span class="category-badge">17+ รายการ &middot; และเพิ่มขึ้นเรื่อย ๆ</span>
+        <span class="category-badge" data-i18n="others.badge">17+ รายการ &middot; และเพิ่มขึ้นเรื่อย ๆ</span>
       </div>
 
       <div class="showcase-grid">
-        <figure class="showcase-item"><img src="assets/products/branded-umbrella.jpg" alt="Branded clear umbrella" loading="lazy" /><figcaption>ร่มสกรีนแบรนด์</figcaption></figure>
-        <figure class="showcase-item"><img src="assets/products/woven-lanyards.jpg" alt="Custom woven lanyards" loading="lazy" /><figcaption>สายคล้องคอทอลาย</figcaption></figure>
-        <figure class="showcase-item"><img src="assets/products/branded-cooler.jpg" alt="Branded cooler box" loading="lazy" /><figcaption>กระติกน้ำแข็งสกรีนแบรนด์</figcaption></figure>
-        <figure class="showcase-item"><img src="assets/products/branded-tumbler.jpg" alt="Branded tumbler" loading="lazy" /><figcaption>แก้วน้ำสกรีนแบรนด์</figcaption></figure>
-        <figure class="showcase-item"><img src="assets/products/branded-flip-flops.jpg" alt="Branded flip-flops" loading="lazy" /><figcaption>รองเท้าแตะสกรีนแบรนด์</figcaption></figure>
-        <figure class="showcase-item"><img src="assets/products/custom-packaging.jpg" alt="Custom client packaging" loading="lazy" /><figcaption>บรรจุภัณฑ์สั่งทำ</figcaption></figure>
+        <figure class="showcase-item"><img src="assets/products/branded-umbrella.jpg" alt="Branded clear umbrella" loading="lazy" /><figcaption data-i18n="others.itemUmbrella">ร่มสกรีนแบรนด์</figcaption></figure>
+        <figure class="showcase-item"><img src="assets/products/woven-lanyards.jpg" alt="Custom woven lanyards" loading="lazy" /><figcaption data-i18n="others.itemLanyards">สายคล้องคอทอลาย</figcaption></figure>
+        <figure class="showcase-item"><img src="assets/products/branded-cooler.jpg" alt="Branded cooler box" loading="lazy" /><figcaption data-i18n="others.itemCooler">กระติกน้ำแข็งสกรีนแบรนด์</figcaption></figure>
+        <figure class="showcase-item"><img src="assets/products/branded-tumbler.jpg" alt="Branded tumbler" loading="lazy" /><figcaption data-i18n="others.itemTumbler">แก้วน้ำสกรีนแบรนด์</figcaption></figure>
+        <figure class="showcase-item"><img src="assets/products/branded-flip-flops.jpg" alt="Branded flip-flops" loading="lazy" /><figcaption data-i18n="others.itemFlipFlops">รองเท้าแตะสกรีนแบรนด์</figcaption></figure>
+        <figure class="showcase-item"><img src="assets/products/custom-packaging.jpg" alt="Custom client packaging" loading="lazy" /><figcaption data-i18n="others.itemPackaging">บรรจุภัณฑ์สั่งทำ</figcaption></figure>
       </div>
       <ul class="chip-list chip-list-dark">
-        <li>ผ้าห่ม</li><li>ผ้าขนหนู</li><li>ผ้าบันดานา</li><li>พวงกุญแจ</li><li>สติกเกอร์ชุดใหญ่</li>
-        <li>สติกเกอร์ชุดเล็ก</li><li>เคสโทรศัพท์กันน้ำ</li><li>แม่เหล็กติดตู้เย็น</li><li>พัดมือถือ</li>
-        <li>กระเป๋าผ้า (Tote Bag)</li><li>กระดาษทิชชู่</li><li>หมอน</li><li>กระเป๋าเป้ใบเล็ก</li><li>ผ้าคลุมไหล่ (Pashmina)</li><li>สายรัดข้อมือ</li>
+        <li data-i18n="others.chip1">ผ้าห่ม</li><li data-i18n="others.chip2">ผ้าขนหนู</li><li data-i18n="others.chip3">ผ้าบันดานา</li><li data-i18n="others.chip4">พวงกุญแจ</li><li data-i18n="others.chip5">สติกเกอร์ชุดใหญ่</li>
+        <li data-i18n="others.chip6">สติกเกอร์ชุดเล็ก</li><li data-i18n="others.chip7">เคสโทรศัพท์กันน้ำ</li><li data-i18n="others.chip8">แม่เหล็กติดตู้เย็น</li><li data-i18n="others.chip9">พัดมือถือ</li>
+        <li data-i18n="others.chip10">กระเป๋าผ้า (Tote Bag)</li><li data-i18n="others.chip11">กระดาษทิชชู่</li><li data-i18n="others.chip12">หมอน</li><li data-i18n="others.chip13">กระเป๋าเป้ใบเล็ก</li><li data-i18n="others.chip14">ผ้าคลุมไหล่ (Pashmina)</li><li data-i18n="others.chip15">สายรัดข้อมือ</li>
       </ul>
-      <p class="fineprint fineprint-light">ตัวอย่างชิ้นงานจากบูธนิทรรศการ &middot; ผลิตโดย PrintPro และเครือข่ายลูกค้าของ Chaiyaboon Brothers Group</p>
+      <p class="fineprint fineprint-light" data-i18n="others.fineprint">ตัวอย่างชิ้นงานจากบูธนิทรรศการ &middot; ผลิตโดย PrintPro และเครือข่ายลูกค้าของ Chaiyaboon Brothers Group</p>
     </div>
   </section>
 
   <!-- HOW WE PRINT -->
   <section class="section section-dark" id="print">
     <div class="wrap">
-      <p class="eyebrow">เทคนิคการพิมพ์</p>
-      <h2>3 เทคโนโลยี<br />ความเป็นไปได้ไม่จำกัด</h2>
+      <p class="eyebrow" data-i18n="print.eyebrow">เทคนิคการพิมพ์</p>
+      <h2 data-i18n="print.heading">3 เทคโนโลยี<br />ความเป็นไปได้ไม่จำกัด</h2>
 
       <div class="print-grid">
         <div class="print-card">
           <span class="print-tag">Direct-to-Garment</span>
           <h3>DTG Printing</h3>
-          <div class="print-sub">
+          <div class="print-sub" data-i18n="print.dtgSub1">
             <strong>Kornit DTG</strong> — สำหรับการผลิตจำนวนมาก ระดับอุตสาหกรรม คุณภาพคมชัดระดับภาพถ่าย พิมพ์ได้ไม่จำกัดสี ใช้หมึกน้ำรักษ์โลก ไม่ต้องทำบล็อกสกรีน
           </div>
-          <div class="print-sub">
+          <div class="print-sub" data-i18n="print.dtgSub2">
             <strong>Brother GTX</strong> — พิมพ์สดหน้างาน สำหรับออเดอร์จำนวนน้อย ติดตั้งได้ที่หน้างานเทศกาลของคุณ ให้แฟน ๆ เลือกลายแล้วรอชมการพิมพ์สดใน ~2 นาที
           </div>
         </div>
         <div class="print-card">
           <span class="print-tag">Silk Screen Printing</span>
           <h3>Screen Print</h3>
-          <div class="print-sub">
+          <div class="print-sub" data-i18n="print.screenSub1">
             <strong>หมึกครบทุกชนิด ผลิตเอง</strong> — CBG ผลิตหมึก Plastisol, หมึกน้ำ, UV, Discharge, หมึกเมทัลลิก, หมึกเรืองแสง และหมึกนูน (Puff) เอง ด้วยประสบการณ์คิดค้นสูตรกว่า 70 ปี
           </div>
-          <div class="print-sub">
+          <div class="print-sub" data-i18n="print.screenSub2">
             <strong>เครือข่ายโรงพิมพ์</strong> — ลูกค้าหมึกของเราคือโรงพิมพ์ทั่วประเทศไทย เมื่อออเดอร์ต้องการกำลังผลิตเพิ่ม เราดึงเครือข่ายนี้มาช่วยขยายกำลังการผลิตได้ทันที
           </div>
         </div>
         <div class="print-card">
           <span class="print-tag">Sublimation Printing</span>
           <h3>Sublimation</h3>
-          <div class="print-sub">
+          <div class="print-sub" data-i18n="print.sublimationSub1">
             <strong>เครื่องพิมพ์ DGI</strong> — เครื่องจักรในโรงงานสำหรับงาน Sublimation ความละเอียดสูง พิมพ์ลายเต็มผืน เสื้อผ้าใยโพลีเอสเตอร์ ของใช้ผ้านุ่ม และลายพิมพ์เต็มขอบ
           </div>
-          <div class="print-sub">
+          <div class="print-sub" data-i18n="print.sublimationSub2">
             <strong>กำลังการผลิตเสริม</strong> — ขยายกำลังการผลิต Sublimation ผ่านเครือข่ายพาร์ทเนอร์การผลิต สำหรับออเดอร์จำนวนมากหรือเร่งด่วน
           </div>
         </div>
@@ -284,29 +256,29 @@
   <!-- SUSTAINABILITY -->
   <section class="section" id="sustainability">
     <div class="wrap">
-      <p class="eyebrow eyebrow-dark">ความยั่งยืน</p>
-      <h2>ผลิตเมอร์ช<br />ให้เป็นมิตรกับโลกมากขึ้น</h2>
+      <p class="eyebrow eyebrow-dark" data-i18n="sustainability.eyebrow">ความยั่งยืน</p>
+      <h2 data-i18n="sustainability.heading">ผลิตเมอร์ช<br />ให้เป็นมิตรกับโลกมากขึ้น</h2>
 
       <div class="sustain-grid">
         <div class="sustain-card">
           <span class="sustain-num">01</span>
-          <h3>โรงงานหมึกที่ได้มาตรฐานรับรอง</h3>
-          <p>โรงงานหมึกของ CBG ได้รับการรับรองมาตรฐานสิ่งแวดล้อม REACH, RoHS และ EN71 — เป็นไปตามมาตรฐานความปลอดภัยและสารเคมีของสหภาพยุโรปในทุกสูตรหมึก</p>
+          <h3 data-i18n="sustainability.card1Title">โรงงานหมึกที่ได้มาตรฐานรับรอง</h3>
+          <p data-i18n="sustainability.card1Body">โรงงานหมึกของ CBG ได้รับการรับรองมาตรฐานสิ่งแวดล้อม REACH, RoHS และ EN71 — เป็นไปตามมาตรฐานความปลอดภัยและสารเคมีของสหภาพยุโรปในทุกสูตรหมึก</p>
         </div>
         <div class="sustain-card">
           <span class="sustain-num">02</span>
-          <h3>สูตรหมึก Low-VOC</h3>
-          <p>หมึก Screen Printing ของเราคิดค้นสูตรแบบ Low-VOC — ปลอดภัยต่อพนักงานผลิต ช่างพิมพ์ และผู้บริโภคปลายทางมากขึ้น ลดผลกระทบต่อสิ่งแวดล้อมระหว่างกระบวนการอบแห้ง</p>
+          <h3 data-i18n="sustainability.card2Title">สูตรหมึก Low-VOC</h3>
+          <p data-i18n="sustainability.card2Body">หมึก Screen Printing ของเราคิดค้นสูตรแบบ Low-VOC — ปลอดภัยต่อพนักงานผลิต ช่างพิมพ์ และผู้บริโภคปลายทางมากขึ้น ลดผลกระทบต่อสิ่งแวดล้อมระหว่างกระบวนการอบแห้ง</p>
         </div>
         <div class="sustain-card">
           <span class="sustain-num">03</span>
-          <h3>DTG ที่ได้มาตรฐาน ECO TEX</h3>
-          <p>งานพิมพ์ DTG ทุกชิ้นบนเครื่อง Kornit ของเราใช้หมึกที่ได้มาตรฐาน ECO TEX เท่านั้น — เป็นหมึกน้ำ ปลอดภัยต่อผิวหนัง และรับรองสำหรับการสัมผัสกับเสื้อผ้าโดยตรง</p>
+          <h3 data-i18n="sustainability.card3Title">DTG ที่ได้มาตรฐาน ECO TEX</h3>
+          <p data-i18n="sustainability.card3Body">งานพิมพ์ DTG ทุกชิ้นบนเครื่อง Kornit ของเราใช้หมึกที่ได้มาตรฐาน ECO TEX เท่านั้น — เป็นหมึกน้ำ ปลอดภัยต่อผิวหนัง และรับรองสำหรับการสัมผัสกับเสื้อผ้าโดยตรง</p>
         </div>
         <div class="sustain-card">
           <span class="sustain-num">04</span>
-          <h3>ผ้ารีไซเคิลและผ้าออร์แกนิก</h3>
-          <p>มีตัวเลือกผ้าโพลีเอสเตอร์รีไซเคิล (rPET) และผ้าฝ้ายออร์แกนิกให้เลือกในทุก SKU เสื้อผ้า จัดหาผ่าน ArriveGuide และเครือข่ายโรงทอผ้าในภูมิภาคเอเชียตะวันออกเฉียงใต้ของเรา</p>
+          <h3 data-i18n="sustainability.card4Title">ผ้ารีไซเคิลและผ้าออร์แกนิก</h3>
+          <p data-i18n="sustainability.card4Body">มีตัวเลือกผ้าโพลีเอสเตอร์รีไซเคิล (rPET) และผ้าฝ้ายออร์แกนิกให้เลือกในทุก SKU เสื้อผ้า จัดหาผ่าน ArriveGuide และเครือข่ายโรงทอผ้าในภูมิภาคเอเชียตะวันออกเฉียงใต้ของเรา</p>
         </div>
       </div>
       <div class="cert-badges">
@@ -318,43 +290,43 @@
   <!-- WHY PRINTPRO -->
   <section class="section section-dark" id="why">
     <div class="wrap">
-      <p class="eyebrow">ทำไมต้อง PrintPro</p>
-      <h2>5 เหตุผล<br />ที่ควรคุยกับเรา</h2>
+      <p class="eyebrow" data-i18n="why.eyebrow">ทำไมต้อง PrintPro</p>
+      <h2 data-i18n="why.heading">5 เหตุผล<br />ที่ควรคุยกับเรา</h2>
 
       <div class="reasons">
         <div class="reason">
           <span class="reason-num">01</span>
           <div>
-            <h3>ประสบการณ์การผลิตกว่า 70 ปี</h3>
-            <p>เราไม่ได้แค่พิมพ์ลงเสื้อผ้า แต่เราผลิตหมึกที่ใช้พิมพ์เองด้วย เป็นเรื่องราวที่ซัพพลายเออร์รายใหม่ไม่มีทางลอกเลียนได้</p>
+            <h3 data-i18n="why.reason1Title">ประสบการณ์การผลิตกว่า 70 ปี</h3>
+            <p data-i18n="why.reason1Body">เราไม่ได้แค่พิมพ์ลงเสื้อผ้า แต่เราผลิตหมึกที่ใช้พิมพ์เองด้วย เป็นเรื่องราวที่ซัพพลายเออร์รายใหม่ไม่มีทางลอกเลียนได้</p>
           </div>
         </div>
         <div class="reason">
           <span class="reason-num">02</span>
           <div>
-            <h3>ผลิตครบวงจร ในระบบนิเวศเดียว</h3>
-            <p>ตั้งแต่สูตรหมึกจนถึงเสื้อผ้าสำเร็จรูป — จัดหาวัตถุดิบ พิมพ์ ตรวจสอบคุณภาพ (QC) และจัดส่ง เชื่อมต่อกันทั้งหมด ลดการส่งต่องาน ลดปัญหาที่ตกหล่น</p>
+            <h3 data-i18n="why.reason2Title">ผลิตครบวงจร ในระบบนิเวศเดียว</h3>
+            <p data-i18n="why.reason2Body">ตั้งแต่สูตรหมึกจนถึงเสื้อผ้าสำเร็จรูป — จัดหาวัตถุดิบ พิมพ์ ตรวจสอบคุณภาพ (QC) และจัดส่ง เชื่อมต่อกันทั้งหมด ลดการส่งต่องาน ลดปัญหาที่ตกหล่น</p>
           </div>
         </div>
         <div class="reason">
           <span class="reason-num">03</span>
           <div>
-            <h3>สินค้าครบพร้อมสำหรับทุกเทศกาล</h3>
-            <p>39 SKU ครอบคลุมเสื้อผ้า หมวก และของใช้อื่น ๆ — ตั้งแต่เสื้อยืดพื้นฐานไปจนถึงของที่ระลึกพิมพ์สดหน้างาน</p>
+            <h3 data-i18n="why.reason3Title">สินค้าครบพร้อมสำหรับทุกเทศกาล</h3>
+            <p data-i18n="why.reason3Body">39 SKU ครอบคลุมเสื้อผ้า หมวก และของใช้อื่น ๆ — ตั้งแต่เสื้อยืดพื้นฐานไปจนถึงของที่ระลึกพิมพ์สดหน้างาน</p>
           </div>
         </div>
         <div class="reason">
           <span class="reason-num">04</span>
           <div>
-            <h3>วัสดุยั่งยืนและหมึกที่ได้มาตรฐานรับรอง</h3>
-            <p>ได้รับการรับรองมาตรฐาน REACH, RoHS, EN71, ZDHC และ ECO TEX พร้อมตัวเลือกผ้า rPET และผ้าฝ้ายออร์แกนิก</p>
+            <h3 data-i18n="why.reason4Title">วัสดุยั่งยืนและหมึกที่ได้มาตรฐานรับรอง</h3>
+            <p data-i18n="why.reason4Body">ได้รับการรับรองมาตรฐาน REACH, RoHS, EN71, ZDHC และ ECO TEX พร้อมตัวเลือกผ้า rPET และผ้าฝ้ายออร์แกนิก</p>
           </div>
         </div>
         <div class="reason">
           <span class="reason-num">05</span>
           <div>
-            <h3>ยืดหยุ่นได้ตั้งแต่ออเดอร์เล็กถึงจำนวนมาก</h3>
-            <p>Brother GTX สำหรับพิมพ์สดหน้างาน Kornit DTG และ Screen Printing สำหรับการผลิตจำนวนมาก พาร์ทเนอร์เดียว รองรับได้ทุกขนาดออเดอร์ — ตั้งแต่ 50 ชิ้นถึง 50,000 ชิ้น</p>
+            <h3 data-i18n="why.reason5Title">ยืดหยุ่นได้ตั้งแต่ออเดอร์เล็กถึงจำนวนมาก</h3>
+            <p data-i18n="why.reason5Body">Brother GTX สำหรับพิมพ์สดหน้างาน Kornit DTG และ Screen Printing สำหรับการผลิตจำนวนมาก พาร์ทเนอร์เดียว รองรับได้ทุกขนาดออเดอร์ — ตั้งแต่ 50 ชิ้นถึง 50,000 ชิ้น</p>
           </div>
         </div>
       </div>
@@ -364,10 +336,10 @@
   <!-- CONTACT -->
   <section class="section contact-section" id="contact">
     <div class="wrap contact-inner">
-      <p class="eyebrow eyebrow-dark">ขั้นตอนถัดไป</p>
-      <h2>มาสร้างไลน์เมอร์ช<br />ของคุณด้วยกัน</h2>
-      <p class="lede">เริ่มด้วยการคุยรายละเอียด ไทม์ไลน์ และจำนวนที่ต้องการ &middot; เยี่ยมชมโรงงานพร้อมดูตัวอย่างงานผลิตจริง &middot; ออกใบเสนอราคาอย่างเป็นทางการหลังยืนยันบรีฟ</p>
-      <a href="mailto:hello@printpro.co.th" class="btn btn-primary btn-large">hello@printpro.co.th</a>
+      <p class="eyebrow eyebrow-dark" data-i18n="contact.eyebrow">ขั้นตอนถัดไป</p>
+      <h2 data-i18n="contact.heading">มาสร้างไลน์เมอร์ช<br />ของคุณด้วยกัน</h2>
+      <p class="lede" data-i18n="contact.lede">เริ่มด้วยการคุยรายละเอียด ไทม์ไลน์ และจำนวนที่ต้องการ &middot; เยี่ยมชมโรงงานพร้อมดูตัวอย่างงานผลิตจริง &middot; ออกใบเสนอราคาอย่างเป็นทางการหลังยืนยันบรีฟ</p>
+      <a href="mailto:printpro@chaiyaboon.com" class="btn btn-primary btn-large">printpro@chaiyaboon.com</a>
     </div>
   </section>
 
@@ -376,10 +348,20 @@
 <footer class="site-footer">
   <div class="wrap footer-inner">
     <img src="assets/printpro-logo-isolated.png" alt="PrintPro" class="footer-logo" />
-    <p>PrintPro — หน่วยธุรกิจเมอร์ชแชนไดส์ในเครือ Chaiyaboon Brothers Group (CBG)</p>
+    <p data-i18n="footer.tagline">PrintPro — หน่วยธุรกิจเมอร์ชแชนไดส์ในเครือ Chaiyaboon Brothers Group (CBG)</p>
   </div>
 </footer>
 
+<!-- i18n embedded fallback (auto-generated — do not hand-edit).
+     Bundled snapshot of locales/*.json so the TH/EN switch also works when
+     this file is opened directly (double-clicked) instead of served over
+     http(s), where fetch() can't load local files. Edit locales/*.json, then
+     run `python3 scripts/embed-locales.py` to refresh the blocks below. -->
+<!-- I18N_EMBED_START -->
+<script type="application/json" id="i18n-embedded-th">{"meta":{"description":"PrintPro คือหน่วยธุรกิจผลิตเมอร์ชและรับผลิต OEM ในเครือ Chaiyaboon Brothers Group — DTG, Screen Printing, Sublimation และ Embroidery หนุนหลังด้วยประสบการณ์ผลิตหมึกสกรีนกว่า 70 ปี"},"nav":{"story":"เรื่องราวของเรา","ecosystem":"ระบบนิเวศการผลิต","produce":"สินค้าที่เราผลิต","print":"เทคนิคการพิมพ์","sustainability":"ความยั่งยืน","cta":"ขอใบเสนอราคา","toggleLabel":"เปิด/ปิดเมนู"},"hero":{"credit":"ถ่ายทำที่กรุงเทพฯ &middot; งานพิมพ์ PrintPro สวมใส่โดยศิลปินผู้ร่วมงานกับเรา","eyebrow":"Chaiyaboon Brothers Group &middot; หน่วยธุรกิจเมอร์ชแชนไดส์","sub":"ผู้ผลิตเมอร์ชแชนไดส์และรับผลิต OEM ครบวงจร — DTG, Silkscreen, Sublimation และ Embroidery ต่อยอดจากประสบการณ์ผลิตหมึกสกรีนในเครือกว่า 70 ปี พาร์ทเนอร์เดียวที่ดูแลตั้งแต่สูตรหมึกจนถึงเมอร์ชสำเร็จรูปส่งถึงหน้างาน","ctaPrimary":"ขอใบเสนอราคา","ctaSecondary":"ดูสินค้าที่เราผลิต"},"marquee":{"ink":"ผลิตหมึกมากว่า 70 ปี"},"story":{"eyebrow":"เรื่องราวของเรา","heading":"70 ปีแห่งหมึกพิมพ์<br />วันนี้เราผลิตเมอร์ชด้วย","lede":"Chaiyaboon Brothers Group คือหนึ่งในเสาหลักของอุตสาหกรรม Screen Printing ในประเทศไทยมาตั้งแต่ยุค 1950s — ผลิตและจัดส่งหมึกให้ผู้ผลิตเสื้อผ้า โรงพิมพ์ และธุรกิจสิ่งทอทั่วภูมิภาคเอเชียตะวันออกเฉียงใต้ PrintPro คือหน่วยธุรกิจผลิตเมอร์ชแชนไดส์โดยเฉพาะของ CBG สร้างขึ้นเพื่อนำความเชี่ยวชาญด้านหมึกพิมพ์นั้นมาต่อยอดสู่โลกของเมอร์ชสำหรับอีเวนต์ ศิลปิน และแบรนด์โดยตรง","stat1Label":"ปีในธุรกิจหมึกสกรีน","stat2Label":"ผู้ผลิตหมึกสกรีนรายใหญ่ที่สุดในประเทศไทย","stat3Label":"ปีที่ก่อตั้งหน่วยธุรกิจ PrintPro","stat4Value":"ครบวงจร","stat4Label":"ระบบนิเวศ End-to-End"},"ecosystem":{"eyebrow":"ระบบนิเวศของเรา","heading":"จากสูตรหมึก<br />สู่เมอร์ชสำเร็จรูป","lede":"เพราะเราผลิตหมึกเองทุกสูตร เราจึงควบคุมทุกตัวแปรที่ซัพพลายเออร์รายอื่นทำไม่ได้ — ความแม่นยำของสี ความทนทานต่อการซัก มาตรฐานสิ่งแวดล้อม และต้นทุน นี่คือความได้เปรียบที่คู่แข่งลอกเลียนไม่ได้","step1Title":"ผลิตหมึกพิมพ์","step1Body":"CBG คิดค้นและผลิตหมึก Screen Printing, UV และหมึกรักษ์โลกเองในโรงงาน — สั่งสมงานวิจัยและพัฒนามากว่า 70 ปี","step2Title":"จัดหาผ้าและเสื้อผ้าเปล่า","step2Body":"สายสัมพันธ์โดยตรงกับโรงทอผ้าทั่วไทยและเอเชียตะวันออกเฉียงใต้ — ตัวเลือกผ้าคอตตอน, rPET, ผ้าออร์แกนิก และเป็นผู้แทนจำหน่ายอย่างเป็นทางการแต่เพียงผู้เดียวของ ArriveGuide ในประเทศไทย","step3Title":"พิมพ์และผลิต","step3Body":"Screen Print, DTG (Kornit), Sublimation, Embroidery, Garment Dye — ครบทุกเทคนิคภายใต้หลังคาเดียว","step4Title":"แพ็กและจัดส่ง","step4Body":"PrintPro แพ็กสินค้า ตรวจสอบคุณภาพ (QC) และจัดส่งถึงคลังของคุณหรือส่งตรงถึงหน้างานอีเวนต์"},"produce":{"eyebrow":"สินค้าที่เราผลิต","heading":"39 SKU สามหมวดหมู่<br />ไลน์การผลิตเดียว","lede":"เสื้อผ้า หมวก และของอื่น ๆ ที่รับงานพิมพ์ได้ — เลือกดูสินค้าทั้งหมดด้านล่าง หรือข้ามไปหมวดที่คุณสนใจได้เลย","jumpApparel":"เสื้อผ้า (Apparel)","jumpHeadwear":"หมวก (Headwear)","jumpOthers":"อื่น ๆ (Others)"},"apparel":{"eyebrow":"เสื้อผ้า (Apparel)","heading":"เสื้อยืด เสื้อตัด เลเยอร์<br />และเสื้อคลุม","lede":"ทุกทรงที่งานบนเวทีใหญ่ต้องการ — สั่งพิมพ์และปักได้ครบทุกแบบในช่วงราคาเดียว","badge":"13 รายการ &middot; ครบทุกไซซ์","itemSoccerJersey":"เสื้อฟุตบอลสั่งพิมพ์","itemRegularTee":"เสื้อยืดทรงปกติ","itemOversizedTee":"เสื้อยืดทรง Oversize","itemWashedTee":"เสื้อยืดฟอกสี","itemBasketballJersey":"เสื้อบาสเกตบอล","itemBasketballShorts":"กางเกงบาสเกตบอล","chip1":"เสื้อครอป","chip2":"Baby Tee","chip3":"เสื้อกล้าม","chip4":"Hoodie","chip5":"กางเกงวอร์ม","chip6":"เสื้อเบสบอล","chip7":"แจ็กเก็ต","chip8":"กางเกงบ็อกเซอร์"},"headwear":{"eyebrow":"หมวก (Headwear)","heading":"กันแดดได้<br />พร้อมลุยทุกฝูงชน","lede":"หมวกสำหรับทุกโมเมนต์ในเทศกาล — สั่งพิมพ์และปักได้ครบทุกแบบ","badge":"9 รายการ &middot; ครบทุกไซซ์","chip1":"หมวกแก๊ป (Baseball Cap)","chip2":"Trucker Hat","chip3":"หมวกบักเก็ต (Bucket Hat)","chip4":"Lifeguard Hat","chip5":"Snapback","chip6":"Outdoor Bucket Hat","chip7":"หมวกไหมพรม (Beanies)","chip8":"ผ้าคาดผม (Head Band)","photoCaption":"Dad Hat — งานปัก (Embroidered)"},"others":{"eyebrow":"อื่น ๆ (Others)","heading":"สกรีนลงได้ ก็ทำเป็นเมอร์ชได้<br />ไม่ว่าจะเป็นอะไรก็ตาม","lede":"ขอบเขตจริง ๆ ของเราไปไกลกว่าเสื้อผ้าและหมวก จากฐานลูกค้าทั้งหมดของ Chaiyaboon วัตถุใดก็ตามที่สกรีนลงได้ กลายเป็นเมอร์ชได้ทั้งนั้น — ร่ม กระติกน้ำแข็ง แก้วน้ำ รองเท้า บรรจุภัณฑ์ ถ้ามันรับภาพได้ เราพิมพ์ได้","badge":"17+ รายการ &middot; และเพิ่มขึ้นเรื่อย ๆ","itemUmbrella":"ร่มสกรีนแบรนด์","itemLanyards":"สายคล้องคอทอลาย","itemCooler":"กระติกน้ำแข็งสกรีนแบรนด์","itemTumbler":"แก้วน้ำสกรีนแบรนด์","itemFlipFlops":"รองเท้าแตะสกรีนแบรนด์","itemPackaging":"บรรจุภัณฑ์สั่งทำ","chip1":"ผ้าห่ม","chip2":"ผ้าขนหนู","chip3":"ผ้าบันดานา","chip4":"พวงกุญแจ","chip5":"สติกเกอร์ชุดใหญ่","chip6":"สติกเกอร์ชุดเล็ก","chip7":"เคสโทรศัพท์กันน้ำ","chip8":"แม่เหล็กติดตู้เย็น","chip9":"พัดมือถือ","chip10":"กระเป๋าผ้า (Tote Bag)","chip11":"กระดาษทิชชู่","chip12":"หมอน","chip13":"กระเป๋าเป้ใบเล็ก","chip14":"ผ้าคลุมไหล่ (Pashmina)","chip15":"สายรัดข้อมือ","fineprint":"ตัวอย่างชิ้นงานจากบูธนิทรรศการ &middot; ผลิตโดย PrintPro และเครือข่ายลูกค้าของ Chaiyaboon Brothers Group"},"print":{"eyebrow":"เทคนิคการพิมพ์","heading":"3 เทคโนโลยี<br />ความเป็นไปได้ไม่จำกัด","dtgSub1":"<strong>Kornit DTG<\/strong> — สำหรับการผลิตจำนวนมาก ระดับอุตสาหกรรม คุณภาพคมชัดระดับภาพถ่าย พิมพ์ได้ไม่จำกัดสี ใช้หมึกน้ำรักษ์โลก ไม่ต้องทำบล็อกสกรีน","dtgSub2":"<strong>Brother GTX<\/strong> — พิมพ์สดหน้างาน สำหรับออเดอร์จำนวนน้อย ติดตั้งได้ที่หน้างานเทศกาลของคุณ ให้แฟน ๆ เลือกลายแล้วรอชมการพิมพ์สดใน ~2 นาที","screenSub1":"<strong>หมึกครบทุกชนิด ผลิตเอง<\/strong> — CBG ผลิตหมึก Plastisol, หมึกน้ำ, UV, Discharge, หมึกเมทัลลิก, หมึกเรืองแสง และหมึกนูน (Puff) เอง ด้วยประสบการณ์คิดค้นสูตรกว่า 70 ปี","screenSub2":"<strong>เครือข่ายโรงพิมพ์<\/strong> — ลูกค้าหมึกของเราคือโรงพิมพ์ทั่วประเทศไทย เมื่อออเดอร์ต้องการกำลังผลิตเพิ่ม เราดึงเครือข่ายนี้มาช่วยขยายกำลังการผลิตได้ทันที","sublimationSub1":"<strong>เครื่องพิมพ์ DGI<\/strong> — เครื่องจักรในโรงงานสำหรับงาน Sublimation ความละเอียดสูง พิมพ์ลายเต็มผืน เสื้อผ้าใยโพลีเอสเตอร์ ของใช้ผ้านุ่ม และลายพิมพ์เต็มขอบ","sublimationSub2":"<strong>กำลังการผลิตเสริม<\/strong> — ขยายกำลังการผลิต Sublimation ผ่านเครือข่ายพาร์ทเนอร์การผลิต สำหรับออเดอร์จำนวนมากหรือเร่งด่วน"},"sustainability":{"eyebrow":"ความยั่งยืน","heading":"ผลิตเมอร์ช<br />ให้เป็นมิตรกับโลกมากขึ้น","card1Title":"โรงงานหมึกที่ได้มาตรฐานรับรอง","card1Body":"โรงงานหมึกของ CBG ได้รับการรับรองมาตรฐานสิ่งแวดล้อม REACH, RoHS และ EN71 — เป็นไปตามมาตรฐานความปลอดภัยและสารเคมีของสหภาพยุโรปในทุกสูตรหมึก","card2Title":"สูตรหมึก Low-VOC","card2Body":"หมึก Screen Printing ของเราคิดค้นสูตรแบบ Low-VOC — ปลอดภัยต่อพนักงานผลิต ช่างพิมพ์ และผู้บริโภคปลายทางมากขึ้น ลดผลกระทบต่อสิ่งแวดล้อมระหว่างกระบวนการอบแห้ง","card3Title":"DTG ที่ได้มาตรฐาน ECO TEX","card3Body":"งานพิมพ์ DTG ทุกชิ้นบนเครื่อง Kornit ของเราใช้หมึกที่ได้มาตรฐาน ECO TEX เท่านั้น — เป็นหมึกน้ำ ปลอดภัยต่อผิวหนัง และรับรองสำหรับการสัมผัสกับเสื้อผ้าโดยตรง","card4Title":"ผ้ารีไซเคิลและผ้าออร์แกนิก","card4Body":"มีตัวเลือกผ้าโพลีเอสเตอร์รีไซเคิล (rPET) และผ้าฝ้ายออร์แกนิกให้เลือกในทุก SKU เสื้อผ้า จัดหาผ่าน ArriveGuide และเครือข่ายโรงทอผ้าในภูมิภาคเอเชียตะวันออกเฉียงใต้ของเรา"},"why":{"eyebrow":"ทำไมต้อง PrintPro","heading":"5 เหตุผล<br />ที่ควรคุยกับเรา","reason1Title":"ประสบการณ์การผลิตกว่า 70 ปี","reason1Body":"เราไม่ได้แค่พิมพ์ลงเสื้อผ้า แต่เราผลิตหมึกที่ใช้พิมพ์เองด้วย เป็นเรื่องราวที่ซัพพลายเออร์รายใหม่ไม่มีทางลอกเลียนได้","reason2Title":"ผลิตครบวงจร ในระบบนิเวศเดียว","reason2Body":"ตั้งแต่สูตรหมึกจนถึงเสื้อผ้าสำเร็จรูป — จัดหาวัตถุดิบ พิมพ์ ตรวจสอบคุณภาพ (QC) และจัดส่ง เชื่อมต่อกันทั้งหมด ลดการส่งต่องาน ลดปัญหาที่ตกหล่น","reason3Title":"สินค้าครบพร้อมสำหรับทุกเทศกาล","reason3Body":"39 SKU ครอบคลุมเสื้อผ้า หมวก และของใช้อื่น ๆ — ตั้งแต่เสื้อยืดพื้นฐานไปจนถึงของที่ระลึกพิมพ์สดหน้างาน","reason4Title":"วัสดุยั่งยืนและหมึกที่ได้มาตรฐานรับรอง","reason4Body":"ได้รับการรับรองมาตรฐาน REACH, RoHS, EN71, ZDHC และ ECO TEX พร้อมตัวเลือกผ้า rPET และผ้าฝ้ายออร์แกนิก","reason5Title":"ยืดหยุ่นได้ตั้งแต่ออเดอร์เล็กถึงจำนวนมาก","reason5Body":"Brother GTX สำหรับพิมพ์สดหน้างาน Kornit DTG และ Screen Printing สำหรับการผลิตจำนวนมาก พาร์ทเนอร์เดียว รองรับได้ทุกขนาดออเดอร์ — ตั้งแต่ 50 ชิ้นถึง 50,000 ชิ้น"},"contact":{"eyebrow":"ขั้นตอนถัดไป","heading":"มาสร้างไลน์เมอร์ช<br />ของคุณด้วยกัน","lede":"เริ่มด้วยการคุยรายละเอียด ไทม์ไลน์ และจำนวนที่ต้องการ &middot; เยี่ยมชมโรงงานพร้อมดูตัวอย่างงานผลิตจริง &middot; ออกใบเสนอราคาอย่างเป็นทางการหลังยืนยันบรีฟ"},"footer":{"tagline":"PrintPro — หน่วยธุรกิจเมอร์ชแชนไดส์ในเครือ Chaiyaboon Brothers Group (CBG)"}}</script>
+<script type="application/json" id="i18n-embedded-en">{"meta":{"description":"PrintPro is Chaiyaboon Brothers Group's merchandise production and brand OEM division — DTG, screen printing, sublimation and embroidery, backed by 70+ years of in-house ink manufacturing."},"nav":{"story":"Story","ecosystem":"Ecosystem","produce":"What We Produce","print":"How We Print","sustainability":"Sustainability","cta":"Get a Quote","toggleLabel":"Toggle navigation"},"hero":{"credit":"On location, Bangkok &middot; PrintPro print worn by our artist collaborator","eyebrow":"Chaiyaboon Brothers Group &middot; Merchandise Division","sub":"Merchandise production and brand OEM — DTG, silkscreen, sublimation and embroidery, built on 70+ years of in-house ink manufacturing. One partner, from ink formula to finished merch on your doorstep.","ctaPrimary":"Get a Quote","ctaSecondary":"See What We Make"},"marquee":{"ink":"70+ YEARS OF INK"},"story":{"eyebrow":"Our Story","heading":"70 Years of Ink.<br />Now We Make the Merch.","lede":"Chaiyaboon Brothers Group has been the backbone of Thailand's screen printing industry since the 1950s — supplying inks to garment manufacturers, print shops, and textile businesses across Southeast Asia. PrintPro is CBG's dedicated merchandise production division, built to bring that same ink expertise directly into the world of event, artist, and brand merchandise.","stat1Label":"Years in Screen&nbsp;Ink Business","stat2Label":"Largest Screen Ink Manufacturer in&nbsp;Thailand","stat3Label":"PrintPro Merch Division Founded","stat4Value":"Full","stat4Label":"End-to-End Ecosystem"},"ecosystem":{"eyebrow":"Our Ecosystem","heading":"From Ink Formula<br />to Finished Merch.","lede":"Because we manufacture our own inks, we control every variable other suppliers can't — color accuracy, wash durability, eco-compliance, and cost. That's the unfair advantage.","step1Title":"Ink Manufacturing","step1Body":"CBG formulates and produces screen printing, UV, and eco inks in-house — 70 years of R&amp;D.","step2Title":"Garment Sourcing","step2Body":"Direct relationships with fabric mills across Thailand and SE Asia — cotton, rPET, organic options. Official exclusive distributor of ArriveGuide in Thailand.","step3Title":"Printing &amp; Production","step3Body":"Screen print, DTG (Kornit), sublimation, embroidery, garment dye — all under one roof.","step4Title":"Merch &amp; Delivery","step4Body":"PrintPro packages, QC inspects, and ships to your warehouse or direct to event site."},"produce":{"eyebrow":"What We Produce","heading":"39 SKUs, Three Categories,<br />One Production Line.","lede":"Apparel, headwear, and everything else that can carry a print — browse the range below, or skip to what's caught your eye.","jumpApparel":"Apparel","jumpHeadwear":"Headwear","jumpOthers":"Others"},"apparel":{"eyebrow":"Apparel","heading":"Tees, Cuts, Layers<br />&amp; Outerwear.","lede":"Every silhouette the mainstage demands — custom print and embroidery across the full range.","badge":"13 Products &middot; Full Range","itemSoccerJersey":"Custom Soccer Jersey","itemRegularTee":"Regular T-Shirt","itemOversizedTee":"Oversized T-Shirt","itemWashedTee":"Washed T-Shirt","itemBasketballJersey":"Basketball Jersey","itemBasketballShorts":"Basketball Shorts","chip1":"Crop T-Shirt","chip2":"Baby Tee","chip3":"Tank Top","chip4":"Hoodie","chip5":"Sweatpant","chip6":"Baseball Jersey","chip7":"Jacket","chip8":"Boxer Shorts"},"headwear":{"eyebrow":"Headwear","heading":"Sun-Blocking,<br />Crowd-Ready.","lede":"Headwear for every festival moment — custom print and embroidery across the full range.","badge":"9 Products &middot; Full Range","chip1":"Baseball Cap","chip2":"Trucker Hat","chip3":"Bucket Hat","chip4":"Lifeguard Hat","chip5":"Snapback","chip6":"Outdoor Bucket Hat","chip7":"Beanies","chip8":"Head Band","photoCaption":"Dad Hat — embroidered"},"others":{"eyebrow":"Others","heading":"If It Can Be Screened,<br />We Can Merch It.","lede":"The real range goes beyond apparel and headwear. Across Chaiyaboon's full client base, any object that can take a screen becomes merch — umbrellas, coolers, tumblers, footwear, packaging. If it holds an image, we can run it.","badge":"17+ Products &middot; And Growing","itemUmbrella":"Branded Umbrella","itemLanyards":"Woven Lanyards","itemCooler":"Branded Cooler","itemTumbler":"Branded Tumbler","itemFlipFlops":"Branded Flip-Flops","itemPackaging":"Custom Packaging","chip1":"Blanket","chip2":"Towel","chip3":"Bandana","chip4":"Keychain","chip5":"Sticker Slap Pack","chip6":"Sticker Pack","chip7":"Waterproof Phone Case","chip8":"Magnet","chip9":"Handheld Fan","chip10":"Tote Bag","chip11":"Tissue Paper","chip12":"Pillow","chip13":"Mini Backpack","chip14":"Pashmina","chip15":"Wristband","fineprint":"Sample pieces from the exhibition floor &middot; produced across PrintPro &amp; the wider Chaiyaboon Brothers Group client base."},"print":{"eyebrow":"How We Print","heading":"Three Technologies.<br />Endless Possibilities.","dtgSub1":"<strong>Kornit DTG<\/strong> — mass production. Industrial-grade, photographic quality, high-volume runs with no color limits, water-based eco inks, no screens required.","dtgSub2":"<strong>Brother GTX<\/strong> — live on-site, small orders. Deployed at your festival: fans pick a design and watch it print in ~2 minutes.","screenSub1":"<strong>All ink types, in-house<\/strong> — CBG manufactures plastisol, water-based, UV, discharge, metallic, glow, and puff inks. 70 years of formulation.","screenSub2":"<strong>Production network<\/strong> — our ink clients are printing shops across Thailand. When demand scales, we activate this network for extra capacity on demand.","sublimationSub1":"<strong>DGI Printers<\/strong> — in-house equipment for high-resolution dye-sublimation: all-over prints, polyester garments, soft accessories, full-bleed designs.","sublimationSub2":"<strong>Expanded capacity<\/strong> — additional sublimation capacity via our production partner network for large-scale or time-sensitive orders."},"sustainability":{"eyebrow":"Sustainability","heading":"Made for a<br />Greener Merch Run.","card1Title":"Certified Ink Manufacturing","card1Body":"CBG's ink factory holds REACH, RoHS, and EN71 environmental certifications — meeting EU safety and chemical compliance standards across all ink formulations.","card2Title":"Low-VOC Ink Formulations","card2Body":"Our screen printing inks are formulated low-VOC — safer for production workers, printers, and end consumers, with reduced environmental impact during curing.","card3Title":"ECO TEX Certified DTG","card3Body":"All DTG printing on our Kornit machines uses ECO TEX certified inks exclusively — water-based, skin-safe, and certified for direct contact with garments.","card4Title":"Recycled &amp; Organic Fabrics","card4Body":"rPET recycled polyester and organic cotton options available across all apparel SKUs — sourced through ArriveGuide and our SE Asia fabric mill network."},"why":{"eyebrow":"Why PrintPro","heading":"Five Reasons to<br />Talk to Us.","reason1Title":"70+ Years of Manufacturing Heritage","reason1Body":"We don't just print on garments — we manufacture the inks that print them. A track record no new-entry supplier can replicate.","reason2Title":"End-to-End Production, One Ecosystem","reason2Body":"From ink formulation to finished garment — sourcing, printing, QC, and delivery are all connected. Fewer handoffs, fewer problems.","reason3Title":"Festival-Ready Product Range","reason3Body":"39 SKUs across apparel, headwear, and accessories — from core tees to on-site live-printed keepsakes.","reason4Title":"Sustainable Materials &amp; Certified Inks","reason4Body":"REACH, RoHS, EN71, ZDHC, and ECO TEX certifications, plus rPET and organic cotton options.","reason5Title":"Flexible, Small Runs to Large-Scale Volume","reason5Body":"Brother GTX for live on-site drops. Kornit DTG and screen printing for mass production. One partner, any scale — 50 pieces to 50,000 units."},"contact":{"eyebrow":"Next Steps","heading":"Let's Build Your<br />Merch Line.","lede":"Introductory call to align on requirements, timeline &amp; volumes &middot; factory visit with full production samples &middot; formal quotation after brief confirmation."},"footer":{"tagline":"PrintPro — Merchandise Division of Chaiyaboon Brothers Group (CBG)"}}</script>
+<!-- I18N_EMBED_END -->
+<script src="i18n.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
